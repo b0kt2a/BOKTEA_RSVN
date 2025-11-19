@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>매장/테마/키워드 검색</title>
+</head>
+<body>
+    <h1>매장/테마/키워드 검색</h1>
+    <form method="POST">
+        <input type="text" name="keyword" placeholder="매장명, 테마명, 별칭 등 아무거나 검색" required>
+        <input type="submit" value="검색">
+    </form>
+    {% if keyword %}
+        <h2>"{{ keyword }}" 검색 결과</h2>
+        {% if results %}
+            <ul>
+            {% for row in results %}
+                <li>
+                    <strong>{{ row[0] }}</strong> (마감: D-{{ row[1] }} {{ row[2] }})
+                </li>
+            {% endfor %}
+            </ul>
+        {% else %}
+            <p>검색 결과가 없습니다.</p>
+        {% endif %}
+    {% endif %}
+    <p><a href="/">← 마감일 계산기로</a></p>
+</body>
+</html>
