@@ -179,6 +179,7 @@ def theme_detail(theme_id):
                            schedule_weekday=schedule_weekday,
                            schedule_weekend=schedule_weekend)
 
-if __name__ == '__main__':
-    import_csv()
-    app.run(debug=True)
+if __name__ == "__main__":
+    import os
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
