@@ -50,11 +50,16 @@
       font-weight: 500;
       margin-bottom: 3px;
     }
-      input[type="date"] {
-    width: 100%;
-    max-width: 100%; /* ✅ 추가 */
-    box-sizing: border-box;
-  }
+    input[type="date"] {
+      width: 100%;
+      height: 48px; /* 검색창 높이와 동일하게 */
+      box-sizing: border-box;
+      padding: 0 12px;
+      font-size: 16px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+  
     input[type="text"] {
       width: 100%;
       padding: 10px 12px;
@@ -117,6 +122,11 @@
         max-width: 340px;
         padding: 24px 5vw 20px 5vw;
       }
+      input[type="date"],
+      input[type="text"] {
+        height: 48px;
+        font-size: 16px;
+  }
     }
   </style>
 </head>
