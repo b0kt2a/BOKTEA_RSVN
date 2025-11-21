@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <title>{{ theme.theme_name }}</title>
     <style>
-        /* 전체 페이지 배경, 글꼴 설정 */
+
+        /* #본문 전체 설정 */
         body {
             font-family: 'Noto Sans KR', sans-serif;
             margin: 40px 0;
@@ -16,110 +17,94 @@
             align-items: center;
         }
 
-        /* #테마 제목 */
+        /* #테마 제목 (가운데 정렬 유지) */
         h1 {
-            font-size: 2rem;
-            margin-bottom: 24px;
+            font-size: 2.2rem;
+            margin-bottom: 20px;
             text-align: center;
             color: #1e1e3f;
             font-weight: bold;
-            width: 100%;
         }
 
-        /* #이용지점, 이용시간, 이용금액 텍스트 */
+        /* #이용지점~이용금액 텍스트 */
         .info {
-            margin: 8px 0;
+            margin: 10px 0;
             font-size: 1.2rem;
-            text-align: left; /* ← 가운데 정렬 해제 */
-            width: 100%;      /* 전체 폭 확보해서 왼쪽 정렬 반영되도록 */
+            text-align: left;  /* ← 왼쪽 정렬로 강제 */
+            width: 100%;
+            max-width: 720px;  /* 박스 폭에 맞게 */
+            box-sizing: border-box;
+            padding: 0 12px;
         }
 
         .info strong {
             color: #555;
         }
 
-        /* #중앙 컨텐츠 박스 (시간표 포함 전체 박스) */
+        /* #테마 상세페이지 센터 박스 */
         .center-box {
             background: #fff;
-            padding: 40px 32px;
-            border-radius: 18px;
+            padding: 36px 24px;
+            border-radius: 20px;
             box-shadow: 0 4px 24px rgba(0,0,0,0.08);
-            width: 90vw;
-            max-width: 760px;
-            box-sizing: border-box;
+            width: 95vw;
+            max-width: 800px;
             display: flex;
             flex-direction: column;
-            align-items: flex-start;  /* ← 가운데 정렬 아님 */
-            margin: 40px auto 20px auto;
+            align-items: center;
+            margin: 40px auto 60px;
         }
 
-        /* 모바일 대응 */
+        /* #반응형 모바일에서 padding 조절 */
         @media (max-width: 500px) {
             .center-box {
-                padding: 28px 6vw 20px 6vw;
-            }
-
-            .info {
-                font-size: 1rem;
-            }
-
-            .timetable th, .timetable td {
-                font-size: 1rem;
+                width: 92vw;
+                padding: 24px 5vw;
             }
         }
 
         /* #시간표 박스 */
         .schedule-box {
             background: #f0f3ff;
-            padding: 28px 24px;
-            border-radius: 16px;
+            padding: 28px;
+            border-radius: 18px;
             margin: 32px 0;
-            text-align: center;
             width: 100%;
         }
 
-        /* #시간표 제목 (ex. 평일 시간표) */
         .schedule-box h3 {
             margin-top: 0;
-            font-size: 1.3rem;
+            font-size: 1.4rem;
             color: #223089;
             font-weight: bold;
+            text-align: center;
         }
 
-        /* #시간표 설명 (필요시) */
-        .schedule-box p {
-            font-size: 1rem;
-            color: #777;
-            margin-bottom: 12px;
-        }
-
-        /* #시간표 테이블 */
+        /* #시간표 테이블 설정 */
         .timetable {
             width: 100%;
             border-collapse: collapse;
             margin-top: 16px;
-            font-size: 1.1rem;
-            table-layout: fixed;
+            font-size: 1.15rem;
         }
 
         .timetable th,
         .timetable td {
-            padding: 14px 12px;
+            padding: 14px 16px;
             border-bottom: 1px solid #ddd;
-            font-size: 1.1rem;
             text-align: center;
             white-space: nowrap;
         }
 
-        .timetable thead {
-            background-color: #eef0ff;
-            font-weight: bold;
+        .timetable th {
+            font-weight: 600;
             color: #444;
+            background: #e6eaff;
         }
 
-        /* #뒤로가기 링크 */
+        /* #돌아가기 링크 */
         a.back-link {
-            margin-top: 24px;
+            margin-top: 20px;
             display: inline-block;
             color: #5b7fff;
             text-decoration: none;
@@ -129,6 +114,7 @@
         a.back-link:hover {
             text-decoration: underline;
         }
+
     </style>
 </head>
 <body>
