@@ -157,18 +157,23 @@ def index():
 @app.route('/theme/<int:theme_id>/<int:store_id>')
 def theme_detail(theme_id, store_id):
     db = get_db()
-
-    # theme_id와 store_id가 모두 일치하는 항목 조회
-    theme = db.execute(
-        "SELECT * FROM themes WHERE id = ? AND store_id = ?", 
-        (theme_id, store_id)
-    ).fetchone()
+    theme = db.execute("""
+        SELECT 
+            themes.id AS theme_id,
+            themes.name AS theme_name,
+            themes.play_time,
+            themes.price,
+            themes.keywords,
+            stores.name AS store_name
+        FROM themes
+        JOIN stores ON themes.store_id = stores.id
+        WHERE themes.id = ? AND stores.id = ?
+    """, (theme_id, store_id)).fetchone()
 
     if not theme:
         abort(404)
 
-    # 나머지 처리...
-    return render_template('theme_detail.html', theme=theme)
+    return render_template("theme_detail.html", theme=theme)
 
     def format_schedule(raw, play_time):
         if not raw:
