@@ -175,9 +175,9 @@
           {% if result.theme_id %}
             <br><div style="margin-top: 10px;">
               🔍 
-              <a href="{{ url_for('theme_detail', theme_id=result.theme_id) }}">
-                [ {{ result.theme_name }} ] 시간표 보기
-              </a>
+            <a href="{{ url_for('theme_detail', theme_id=result.theme_id, store_id=result.store_id) }}">
+            [ {{ result.theme_name }} ] 시간표 보기
+            </a>
             </div>
           {% endif %}
         </div>

@@ -154,8 +154,8 @@ def index():
                            selected_store=selected_store,
                            selected_date=selected_date)
 
-@app.route("/theme/<int:theme_id>")
-def theme_detail(theme_id):
+@app.route('/theme/<int:theme_id>/<int:store_id>')
+def theme_detail(theme_id, store_id):
     db = get_db()
     theme = db.execute("SELECT * FROM themes WHERE id = ?", (theme_id,)).fetchone()
     if not theme:
