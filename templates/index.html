@@ -172,10 +172,10 @@
           {% endif %}
 
           <!-- 테마 상세 페이지 링크 -->
-          {% if result.theme_id %}
+          {% if 'theme_id' in result and 'store_id' in result %}
             <br><div style="margin-top: 10px;">
               🔍 
-            <a href="{{ url_for('theme_detail', theme_id=result['theme_id'], store_id=result['store_id']) }}">
+            <a href="{{ url_for('theme_detail', theme_id=result.theme_id, store_id=result.store_id) }}">
             [ {{ result.theme_name }} ] 시간표 보기
             </a>
             </div>
