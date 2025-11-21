@@ -50,28 +50,25 @@
       font-weight: 500;
       margin-bottom: 3px;
     }
-    input[type="date"] {
-      width: 100%;
-      padding: 10px 12px;
-      border: 1px solid #b0bec5;
-      border-radius: 7px;
-      font-size: 1em;
-      box-sizing: border-box;
-      outline: none;
-      margin-top: 5px;
-      height: 48px;  /* 검색어창과 동일 높이 */
-    }
-  
+    
+    input[type="date"],
     input[type="text"] {
-      width: 100%;
+      width: 100% !important;
+      height: 48px;
+      font-size: 16px;
+      border-radius: 8px;
       padding: 10px 12px;
-      border: 1px solid #b0bec5;
       border-radius: 7px;
       font-size: 1em;
-      box-sizing: border-box;
-      outline: none;
       margin-top: 5px;
+      outline: none;
+      box-sizing: border-box;
+      appearance: none;          /* 기본 iOS 스타일 제거 */
+      -webkit-appearance: none;  /* Safari 대응 */
+      background-color: #fff;
+      border: 1px solid #b0bec5;
     }
+    
     input:focus {
       border-color: #3d5af1;
     }
