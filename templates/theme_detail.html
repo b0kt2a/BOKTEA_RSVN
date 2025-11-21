@@ -4,135 +4,131 @@
     <meta charset="UTF-8">
     <title>{{ theme.theme_name }}</title>
     <style>
-/* ===== 전체 바디 영역 ===== */
-body {
-    font-family: 'Noto Sans KR', sans-serif;
-    margin: 40px 0;
-    padding: 0;
-    background: #f8f9fb;
-    color: #333;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+        /* 전체 페이지 배경, 글꼴 설정 */
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            margin: 40px 0;
+            padding: 0;
+            background: #f8f9fb;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
-/* ===== 페이지 제목 ===== */
-h1 {
-    font-size: 2rem; /* 더 큼 */
-    margin-bottom: 20px;
-    text-align: center;
-    color: #1e1e3f;
-    font-weight: bold;
-}
+        /* #테마 제목 */
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 24px;
+            text-align: center;
+            color: #1e1e3f;
+            font-weight: bold;
+            width: 100%;
+        }
 
-/* ===== 이용지점 ~ 이용금액 텍스트 영역 ===== */
-.info {
-    margin: 10px 0;
-    font-size: 1.2rem;
-    text-align: left; /* # 가운데 정렬 해제 */
-    width: 100%; /* 부모 컨테이너 기준 좌측정렬 유지 */
-    max-width: 600px;
-    box-sizing: border-box;
-}
+        /* #이용지점, 이용시간, 이용금액 텍스트 */
+        .info {
+            margin: 8px 0;
+            font-size: 1.2rem;
+            text-align: left; /* ← 가운데 정렬 해제 */
+            width: 100%;      /* 전체 폭 확보해서 왼쪽 정렬 반영되도록 */
+        }
 
-.info strong {
-    color: #555;
-}
+        .info strong {
+            color: #555;
+        }
 
-/* ===== 시간표 전체 박스 ===== */
-.schedule-box {
-    background: #f0f3ff;
-    padding: 28px;
-    border-radius: 20px;
-    margin: 32px 0;
-    text-align: center;
-    width: 100%;
-    max-width: 720px;
-    box-sizing: border-box;
-}
+        /* #중앙 컨텐츠 박스 (시간표 포함 전체 박스) */
+        .center-box {
+            background: #fff;
+            padding: 40px 32px;
+            border-radius: 18px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+            width: 90vw;
+            max-width: 760px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;  /* ← 가운데 정렬 아님 */
+            margin: 40px auto 20px auto;
+        }
 
-/* ===== 평일 / 주말 제목 ===== */
-.schedule-box h3 {
-    margin-top: 0;
-    font-size: 1.4rem;
-    color: #223089;
-    font-weight: bold;
-}
+        /* 모바일 대응 */
+        @media (max-width: 500px) {
+            .center-box {
+                padding: 28px 6vw 20px 6vw;
+            }
 
-/* ===== 테이블 ===== */
-.timetable {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-    font-size: 1.15rem;
-    table-layout: fixed;
-}
+            .info {
+                font-size: 1rem;
+            }
 
-.timetable th,
-.timetable td {
-    padding: 14px;
-    border-bottom: 1px solid #ddd;
-    font-size: 1.15rem;
-    text-align: center;
-    white-space: nowrap;
-}
+            .timetable th, .timetable td {
+                font-size: 1rem;
+            }
+        }
 
-.timetable th {
-    font-weight: 600;
-    color: #444;
-    background: #e6eaff;
-}
+        /* #시간표 박스 */
+        .schedule-box {
+            background: #f0f3ff;
+            padding: 28px 24px;
+            border-radius: 16px;
+            margin: 32px 0;
+            text-align: center;
+            width: 100%;
+        }
 
-/* ===== 돌아가기 링크 ===== */
-a.back-link {
-    margin-top: 28px;
-    display: inline-block;
-    color: #5b7fff;
-    text-decoration: none;
-    font-size: 1rem;
-}
+        /* #시간표 제목 (ex. 평일 시간표) */
+        .schedule-box h3 {
+            margin-top: 0;
+            font-size: 1.3rem;
+            color: #223089;
+            font-weight: bold;
+        }
 
-a.back-link:hover {
-    text-decoration: underline;
-}
+        /* #시간표 설명 (필요시) */
+        .schedule-box p {
+            font-size: 1rem;
+            color: #777;
+            margin-bottom: 12px;
+        }
 
-/* ===== 페이지 센터박스 ===== */
-.center-box { /* # 시간표 페이지 센터박스 */
-    background: #fff;
-    padding: 40px 32px;
-    border-radius: 20px;
-    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
-    box-sizing: border-box;
-    width: 95vw;
-    max-width: 800px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; /* # 왼쪽 정렬 */
-    margin: 40px auto;
-    margin-top: 30px;
-}
+        /* #시간표 테이블 */
+        .timetable {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 16px;
+            font-size: 1.1rem;
+            table-layout: fixed;
+        }
 
-/* ===== 모바일 대응 ===== */
-@media (max-width: 500px) {
-    .center-box {
-        width: 90vw;
-        padding: 28px 5vw 24px 5vw;
-    }
+        .timetable th,
+        .timetable td {
+            padding: 14px 12px;
+            border-bottom: 1px solid #ddd;
+            font-size: 1.1rem;
+            text-align: center;
+            white-space: nowrap;
+        }
 
-    .info {
-        font-size: 1.1rem;
-    }
+        .timetable thead {
+            background-color: #eef0ff;
+            font-weight: bold;
+            color: #444;
+        }
 
-    .timetable th,
-    .timetable td {
-        font-size: 1rem;
-        padding: 10px;
-    }
+        /* #뒤로가기 링크 */
+        a.back-link {
+            margin-top: 24px;
+            display: inline-block;
+            color: #5b7fff;
+            text-decoration: none;
+            font-size: 1rem;
+        }
 
-    h1 {
-        font-size: 1.6rem;
-    }
-}
+        a.back-link:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
