@@ -50,7 +50,11 @@
       font-weight: 500;
       margin-bottom: 3px;
     }
-    input[type="date"],
+      input[type="date"] {
+    width: 100%;
+    max-width: 100%; /* ✅ 추가 */
+    box-sizing: border-box;
+  }
     input[type="text"] {
       width: 100%;
       padding: 10px 12px;
