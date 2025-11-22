@@ -1,0 +1,3 @@
+.gitignore 파일 내용:
+~$*.xlsx
+__pycache__/

@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <title>{{ theme.theme_name }}</title>
     <style>
+
+        /* #본문 전체 설정 */
         body {
             font-family: 'Noto Sans KR', sans-serif;
             margin: 40px 0;
@@ -15,56 +17,81 @@
             align-items: center;
         }
 
+        /* #테마 제목 (가운데 정렬 유지) */
         h1 {
-            font-size: 1.5em;
-            margin-bottom: 16px;
+            font-size: 3.0rem;
+            margin-bottom: 20px;
             text-align: center;
             color: #1e1e3f;
+            font-weight: bold;
         }
 
+        /* #이용지점~이용금액 텍스트 */
         .info {
             margin: 10px 0;
-            font-size: 1.05em;
+            font-size: 2.0rem;
+            text-align: left;  /* ← 왼쪽 정렬로 강제 */
+            width: 100%;
+            max-width: 720px;  /* 박스 폭에 맞게 */
+            box-sizing: border-box;
+            padding: 0 12px;
         }
 
         .info strong {
             color: #555;
         }
 
+        /* #테마 상세페이지 센터 박스 */
+        .center-box {
+            background: #fff;
+            padding: 36px 24px;
+            border-radius: 20px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+            width: 95vw;
+            max-width: 800px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 40px auto 60px;
+        }
+
+        /* #반응형 모바일에서 padding 조절 */
+        @media (max-width: 500px) {
+            .center-box {
+                width: 92vw;
+                padding: 24px 5vw;
+            }
+        }
+
+        /* #시간표 박스 */
         .schedule-box {
-            background: #f4f6ff;
-            padding: 20px;
-            border-radius: 16px;
-            margin: 22px 0;
-            text-align: center;
+            background: #f0f3ff;
+            padding: 28px;
+            border-radius: 18px;
+            margin: 32px 0;
+            width: 90%;
         }
 
         .schedule-box h3 {
             margin-top: 0;
-            font-size: 1.1em;
+            font-size: 2.0rem;
             color: #223089;
             font-weight: bold;
+            text-align: center;
         }
 
-        .schedule-box p {
-            font-size: 0.9em;
-            color: #777;
-            margin-bottom: 12px;
-        }
-
+        /* #시간표 테이블 설정 */
         .timetable {
             width: 100%;
             border-collapse: collapse;
-            margin-top: 10px;
-            font-size: 0.9em;
-            table-layout: fixed;
+            margin-top: 16px;
+            font-size: 1.8rem;
         }
 
         .timetable th,
         .timetable td {
-            padding: 6px 12px;
+            padding: 14px 16px;
             border-bottom: 1px solid #ddd;
-            font-size: 1.0em;
             text-align: center;
             white-space: nowrap;
         }
@@ -75,30 +102,19 @@
             background: #e6eaff;
         }
 
+        /* #돌아가기 링크 */
         a.back-link {
             margin-top: 20px;
             display: inline-block;
             color: #5b7fff;
             text-decoration: none;
-            font-size: 0.95em;
+            font-size: 1.5rem;
         }
 
         a.back-link:hover {
             text-decoration: underline;
         }
-        
-        .center-box {
-            background: #fff;
-            padding: 36px 28px 20px 28px;
-            border-radius: 18px;
-            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
-            width: 340px;
-            min-width: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-top: 60px;
-        }
+
     </style>
 </head>
 <body>
