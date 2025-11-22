@@ -1,0 +1,184 @@
+<!-- 수정된 예약일 조회 화면 (index.html) -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>예약일 조회</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      min-height: 100vh;
+      margin: 0;
+      padding: 0;
+      background: #f6f8fa;
+      font-family: 'Noto Sans KR', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .center-box {
+      background: #fff;
+      padding: 36px 28px 20px 28px;
+      border-radius: 18px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+      width: 340px;
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 60px;
+    }
+    h1, h2 {
+      text-align: center;
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-size: 1.2em;
+      font-weight: 700;
+      color: #222245;
+    }
+    form {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 16px;
+    }
+    form label {
+      font-size: 1em;
+      color: #284b63;
+      font-weight: 500;
+      margin-bottom: 3px;
+    }
+      input[type="date"] {
+    width: 100%;
+    max-width: 100%; /* ✅ 추가 */
+    box-sizing: border-box;
+  }
+    input[type="text"] {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid #b0bec5;
+      border-radius: 7px;
+      font-size: 1em;
+      box-sizing: border-box;
+      outline: none;
+      margin-top: 5px;
+    }
+    input:focus {
+      border-color: #3d5af1;
+    }
+    .submit-btn {
+      width: 100%;
+      padding: 12px 0;
+      background: #3d5af1;
+      color: #fff;
+      border: none;
+      border-radius: 7px;
+      font-size: 1.12em;
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: 8px;
+    }
+    .submit-btn:hover {
+      background: #263eab;
+    }
+    .store-name-result {
+      font-size: 1.15em;
+      font-weight: bold;
+      color: #223089;
+      text-align: center;
+    }
+    .deadline-result {
+      margin-top: 10px;
+      margin-bottom: 4px;
+      font-size: 1.15em;
+      font-weight: 600;
+      color: #3d5af1;
+      text-align: center;
+    }
+    a {
+      color: #0796c2;
+      text-decoration: underline;
+    }
+    footer {
+      width: 100%;
+      text-align: center;
+      color: #aaa;
+      font-size: 0.8em;
+      margin: 28px 0;
+    }
+    footer span {
+      font-size: 0.5em;
+    }
+    @media (max-width: 500px) {
+      .center-box {
+        width: 96vw;
+        max-width: 340px;
+        padding: 24px 5vw 20px 5vw;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="center-box">
+    <h1>예약일 조회</h1>
+    <form method="post">
+      <label>플레이 예정 날짜를 선택해 주세요
+        <input type="date" name="date" required value="{{ selected_date }}" autocomplete="off" />
+      </label>
+      <label>테마명으로 검색해 주세요
+        <input type="text" name="store" required value="{{ selected_store }}" autocomplete="off" placeholder="테마명 일부 입력 가능 (예:필바에,바여름)" />
+      </label>
+      <button class="submit-btn" type="submit">조회하기</button>
+    </form>
+
+    <br />
+    {% if not results %}
+      {% if error %}
+        <p style="color: red; margin-top: 20px;">{{ error }}</p>
+      {% endif %}
+    {% else %}
+      <h2>예약해야 할 날짜/시간</h2>
+      {% for result in results %}
+        <div style="text-align: center; margin-bottom: 12px;">
+         <!-- 매장명에 링크 적용 -->
+    <div class="store-name-result">
+      {% if result.memo_link %}
+        <a href="{{ result.memo_link }}" target="_blank">[ {{ result.name }} ]</a>
+      {% else %}
+        {{ result.name }}
+      {% endif %}
+    </div>
+
+          <!-- 마감일 -->
+          <div class="deadline-result">{{ result.deadline }}</div>
+
+          <!-- 메모 -->
+          {% if result.memo %}
+            <div style="margin-top: 6px; font-size: 0.9em;">
+              {{ result.memo | safe }}
+            </div>
+          {% endif %}
+
+          <!-- 테마 상세 페이지 링크 -->
+          {% if result.theme_id %}
+            <br><div style="margin-top: 10px;">
+              🔍 
+              <a href="{{ url_for('theme_detail', theme_id=result.theme_id) }}">
+                [ {{ result.theme_name }} ] 시간표 보기
+              </a>
+            </div>
+          {% endif %}
+        </div>
+      {% endfor %}
+    {% endif %}
+  </div>
+
+  <footer>
+    © 2025 <strong style="color:#e07795;">BOK_T2A</strong>. All rights reserved.<br />
+    <span>Made with <span style="color:#f48fb1;font-weight:600;">PEACH BOT</span></span>
+  </footer>
+</body>
+</html>

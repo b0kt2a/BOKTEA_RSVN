@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -204,3 +205,211 @@
     </div>
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ theme.theme_name }}</title>
+    <style>
+
+        /* #본문 전체 설정 */
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            margin: 40px 0;
+            padding: 0;
+            background: #f8f9fb;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* #테마 제목 (가운데 정렬 유지) */
+        h1 {
+            font-size: 3.0rem;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #1e1e3f;
+            font-weight: bold;
+        }
+
+        /* #이용지점~이용금액 텍스트 */
+        .info {
+            margin: 10px 0;
+            font-size: 2.0rem;
+            text-align: left;  /* ← 왼쪽 정렬로 강제 */
+            width: 100%;
+            max-width: 720px;  /* 박스 폭에 맞게 */
+            box-sizing: border-box;
+            padding: 0 12px;
+        }
+
+        .info strong {
+            color: #555;
+        }
+
+        /* #테마 상세페이지 센터 박스 */
+        .center-box {
+            background: #fff;
+            padding: 36px 24px;
+            border-radius: 20px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+            width: 95vw;
+            max-width: 800px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 40px auto 60px;
+        }
+
+        /* #반응형 모바일에서 padding 조절 */
+        @media (max-width: 500px) {
+            .center-box {
+                width: 92vw;
+                padding: 24px 5vw;
+            }
+        }
+
+        /* #시간표 박스 */
+        .schedule-box {
+            background: #f0f3ff;
+            padding: 28px;
+            border-radius: 18px;
+            margin: 32px 0;
+            width: 90%;
+        }
+
+        .schedule-box h3 {
+            margin-top: 0;
+            font-size: 2.0rem;
+            color: #223089;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        /* #시간표 테이블 설정 */
+        .timetable {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 16px;
+            font-size: 1.8rem;
+        }
+
+        .timetable th,
+        .timetable td {
+            padding: 14px 16px;
+            border-bottom: 1px solid #ddd;
+            text-align: center;
+            white-space: nowrap;
+        }
+
+        .timetable th {
+            font-weight: 600;
+            color: #444;
+            background: #e6eaff;
+        }
+
+        /* #돌아가기 링크 */
+        a.back-link {
+            margin-top: 20px;
+            display: inline-block;
+            color: #5b7fff;
+            text-decoration: none;
+            font-size: 1.5rem;
+        }
+
+        a.back-link:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="center-box">
+        <h1>{{ theme.theme_name }}</h1>
+
+        <div class="info">
+            <strong>🎡이용지점 :</strong> {{ theme.store_name }}
+        </div>
+        <div class="info">
+            <strong>⏱️이용시간 :</strong> {{ theme.play_time }}분
+        </div>
+        <div class="info">
+            <strong>💰이용금액 :</strong> {{ theme['price'] if theme['price'] else "정보 없음" }}
+        </div>
+
+        {% if schedule_weekday == schedule_weekend %}
+            <!-- 평일/주말 동일한 시간표 -->
+            <div class="schedule-box">
+                <h3>시간표</h3>
+                <p>※ 평일/주말 시간표 동일</p>
+                <table class="timetable">
+                    <thead>
+                        <tr>
+                            <th>시작시간</th>
+                            <th>종료시간</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for line in schedule_weekday.split('\n') %}
+                            {% set parts = line.split(' ~ ') %}
+                            <tr>
+                                <td>{{ parts[0] }}</td>
+                                <td>{{ parts[1] }}</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        {% else %}
+            <!-- 평일 시간표 -->
+            <div class="schedule-box">
+                <h3>평일 시간표</h3>
+                <table class="timetable">
+                    <thead>
+                        <tr>
+                            <th>시작시간</th>
+                            <th>종료시간</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for line in schedule_weekday.split('\n') %}
+                            {% set parts = line.split(' ~ ') %}
+                            <tr>
+                                <td>{{ parts[0] }}</td>
+                                <td>{{ parts[1] }}</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- 주말 시간표 -->
+            <div class="schedule-box">
+                <h3>주말 시간표</h3>
+                <table class="timetable">
+                    <thead>
+                        <tr>
+                            <th>시작시간</th>
+                            <th>종료시간</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for line in schedule_weekend.split('\n') %}
+                            {% set parts = line.split(' ~ ') %}
+                            <tr>
+                                <td>{{ parts[0] }}</td>
+                                <td>{{ parts[1] }}</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        {% endif %}
+
+        <a href="/" class="back-link">← 돌아가기</a>
+    </div>
+</body>
+</html>
+>>>>>>> 2e48f8f2462097b712b9cba5be626168ecf5a447
