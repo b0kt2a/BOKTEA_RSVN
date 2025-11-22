@@ -25,7 +25,7 @@ def close_db(exception):
 
 
 # --------------------------
-# 메모 URL 추출
+# 메모에서 URL 추출
 # --------------------------
 def extract_url_from_memo(memo):
     if not memo:
@@ -35,7 +35,7 @@ def extract_url_from_memo(memo):
 
 
 # --------------------------
-# 시간 계산 관련
+# 시간 계산
 # --------------------------
 def fix_time_format(t):
     t = t.strip()
@@ -51,7 +51,6 @@ def calculate_end_time(start_time, play_time):
         return end_dt.strftime("%H:%M")
     except:
         return ""
-
 
 def format_schedule(raw, play_time):
     if not raw:
@@ -87,29 +86,38 @@ def index():
             WHERE keywords LIKE ?
         ''', (f"%{selected_store}%",)).fetchall()
 
+        # -----------------------------------------------------------------
+        # 🔥 매장 자체가 한 개도 없으면 → 바로 에러 반환
+        # -----------------------------------------------------------------
+        if not stores:
+            return render_template(
+                "index.html",
+                selected_date=selected_date,
+                selected_store=selected_store,
+                results=[],
+                error="해당 매장/테마를 찾을 수 없어요ㅠ<br>복티에게 요청주시면 빠른시일내에 업뎃할게요🤗"
+            )
+
+        # -----------------------------------------------------------------
+        # 🔥 매장 있을 때 → 예약일 계산
+        # -----------------------------------------------------------------
         for store in stores:
 
             # --- 마감일 계산 ---
             if store['always_open'] and int(store['always_open']) == 1:
                 deadline = store['fixed_note'] or "상시 예약 가능"
+
             elif store['deadline_days'] is not None and store['deadline_time']:
                 d = datetime.strptime(selected_date, '%Y-%m-%d')
                 deadline_date = d - timedelta(days=int(store['deadline_days']))
                 deadline = deadline_date.strftime('%Y년 %m월 %d일 ') + store['deadline_time']
+
             else:
                 deadline = store['fixed_note'] or "정보 없음"
 
             memo_link = extract_url_from_memo(store['memo']) if store['memo'] else None
-  
-    if not results:
-    return render_template(
-        "index.html",
-        selected_date=selected_date,
-        selected_store=selected_store,
-        results=[],
-        error="해당 매장/테마를 찾을 수 없어요ㅠ<br>복티에게 요청주시면 빠른시일내에 업뎃할게요🤗"
-    )
-            # ✔ store_name 부분일치로 테마 찾기
+
+            # ✔ store_name 부분 일치로 테마 찾기
             theme_match = db.execute('''
                 SELECT id, theme_name
                 FROM themes
@@ -130,18 +138,22 @@ def index():
                 'memo': store['memo']
             })
 
-        # 하단에 테마 리스트 (선택사항)
+        # -----------------------------------------------------------------
+        # 🔽 하단 테마 검색 (선택사항)
+        # -----------------------------------------------------------------
         theme_results = db.execute('''
             SELECT *
             FROM themes
             WHERE keywords LIKE ? OR theme_name LIKE ?
         ''', (f"%{selected_store}%", f"%{selected_store}%")).fetchall()
 
-    return render_template("index.html",
-                           results=reservation_results,
-                           theme_results=theme_results,
-                           selected_store=selected_store,
-                           selected_date=selected_date)
+    return render_template(
+        "index.html",
+        results=reservation_results,
+        theme_results=theme_results,
+        selected_store=selected_store,
+        selected_date=selected_date
+    )
 
 
 # --------------------------
