@@ -5,7 +5,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>BOKTEA_RSVN</title>
+
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet" />
+
   <style>
     body {
       min-height: 100vh;
@@ -17,6 +19,7 @@
       flex-direction: column;
       align-items: center;
     }
+
     .center-box {
       background: #fff;
       padding: 36px 28px 20px 28px;
@@ -29,6 +32,7 @@
       align-items: center;
       margin-top: 60px;
     }
+
     h1, h2 {
       text-align: center;
       margin-top: 0;
@@ -37,6 +41,7 @@
       font-weight: 700;
       color: #222245;
     }
+
     form {
       width: 100%;
       display: flex;
@@ -44,34 +49,34 @@
       align-items: stretch;
       gap: 16px;
     }
+
     form label {
       font-size: 1em;
       color: #284b63;
       font-weight: 500;
       margin-bottom: 3px;
     }
-    
+
     input[type="date"],
     input[type="text"] {
       width: 100% !important;
       height: 48px;
       font-size: 16px;
-      border-radius: 8px;
-      padding: 10px 12px;
       border-radius: 7px;
-      font-size: 1em;
+      padding: 10px 12px;
       margin-top: 5px;
       outline: none;
       box-sizing: border-box;
-      appearance: none;          /* 기본 iOS 스타일 제거 */
-      -webkit-appearance: none;  /* Safari 대응 */
       background-color: #fff;
       border: 1px solid #b0bec5;
+      appearance: none;
+      -webkit-appearance: none;
     }
-    
+
     input:focus {
       border-color: #3d5af1;
     }
+
     .submit-btn {
       width: 100%;
       padding: 12px 0;
@@ -84,15 +89,18 @@
       cursor: pointer;
       margin-top: 8px;
     }
+
     .submit-btn:hover {
       background: #263eab;
     }
+
     .store-name-result {
       font-size: 1.15em;
       font-weight: bold;
       color: #223089;
       text-align: center;
     }
+
     .deadline-result {
       margin-top: 10px;
       margin-bottom: 4px;
@@ -101,10 +109,12 @@
       color: #3d5af1;
       text-align: center;
     }
+
     a {
       color: #0796c2;
       text-decoration: underline;
     }
+
     footer {
       width: 100%;
       text-align: center;
@@ -112,20 +122,23 @@
       font-size: 0.8em;
       margin: 28px 0;
     }
+
     footer span {
       font-size: 0.5em;
     }
+
     @media (max-width: 500px) {
       .center-box {
         width: 96vw;
         max-width: 340px;
         padding: 24px 5vw 20px 5vw;
       }
+
       input[type="date"],
       input[type="text"] {
         height: 48px;
         font-size: 16px;
-  }
+      }
     }
   </style>
 </head>
@@ -133,33 +146,44 @@
 <body>
   <div class="center-box">
     <h1>예약일 조회</h1>
+
     <form method="post">
-      <label>플레이 예정 날짜를 선택해 주세요
+      <label>
+        플레이 예정 날짜를 선택해 주세요
         <input type="date" name="date" required value="{{ selected_date }}" autocomplete="off" />
       </label>
-      <label>테마명으로 검색해 주세요
+
+      <label>
+        테마명으로 검색해 주세요
         <input type="text" name="store" required value="{{ selected_store }}" autocomplete="off" placeholder="테마명 일부 입력 가능 (예:필바에,바여름)" />
       </label>
+
       <button class="submit-btn" type="submit">조회하기</button>
     </form>
 
     <br />
+
     {% if not results %}
       {% if error %}
-        <p style="color: red; margin-top: 20px;">{{ error }}</p>
+        <p style="color: #ff5277; font-weight:600; margin-top: 20px; text-align:center;">
+          {{ error | safe }}
+        </p>
       {% endif %}
     {% else %}
+
       <h2>예약해야 할 날짜/시간</h2>
+
       {% for result in results %}
         <div style="text-align: center; margin-bottom: 12px;">
-         <!-- 매장명에 링크 적용 -->
-    <div class="store-name-result">
-      {% if result.memo_link %}
-        <a href="{{ result.memo_link }}" target="_blank">[ {{ result.name }} ]</a>
-      {% else %}
-        {{ result.name }}
-      {% endif %}
-    </div>
+
+          <!-- 매장명 -->
+          <div class="store-name-result">
+            {% if result.memo_link %}
+              <a href="{{ result.memo_link }}" target="_blank">[ {{ result.name }} ]</a>
+            {% else %}
+              {{ result.name }}
+            {% endif %}
+          </div>
 
           <!-- 마감일 -->
           <div class="deadline-result">{{ result.deadline }}</div>
@@ -171,15 +195,17 @@
             </div>
           {% endif %}
 
-          <!-- 테마 상세 페이지 링크 -->
-          {% if 'theme_id' in result and 'store_id' in result %}
-            <br><div style="margin-top: 10px;">
-              🔍 
-            <a href="{{ url_for('theme_detail', theme_id=result.theme_id, store_id=result.store_id) }}">
-            [ {{ result.theme_name }} ] 시간표 보기
-            </a>
+          <!-- 시간표 링크 -->
+          {% if result.theme_id %}
+            <br />
+            <div style="margin-top: 10px;">
+              🔍
+              <a href="{{ url_for('theme_detail', theme_id=result.theme_id) }}">
+                [ {{ result.theme_name }} ] 시간표 보기
+              </a>
             </div>
           {% endif %}
+
         </div>
       {% endfor %}
     {% endif %}
