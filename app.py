@@ -24,14 +24,6 @@ def close_db(exception):
         db.close()
 
 
-# --------------------------
-# 메모에서 URL 추출
-# --------------------------
-def extract_url_from_memo(memo):
-    if not memo:
-        return None
-    match = re.search(r"href=['\"](.*?)['\"]", memo)
-    return match.group(1) if match else None
 
 
 # --------------------------
@@ -115,7 +107,7 @@ def index():
             else:
                 deadline = store['fixed_note'] or "정보 없음"
 
-            memo_link = extract_url_from_memo(store['memo']) if store['memo'] else None
+           
 
             # ✔ store_name 부분 일치로 테마 찾기
             theme_match = db.execute('''
@@ -132,7 +124,7 @@ def index():
             reservation_results.append({
                 'name': store['name'],
                 'deadline': deadline,
-                'memo_link': memo_link,
+                
                 'theme_id': theme_id,
                 'theme_name': theme_name,
                 'memo': store['memo']

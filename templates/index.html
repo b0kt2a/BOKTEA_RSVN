@@ -155,7 +155,7 @@
 
       <label>
         테마명으로 검색해 주세요
-        <input type="text" name="store" required value="{{ selected_store }}" autocomplete="off" placeholder="테마명 일부만 입력 or 띄어쓰기 없이 입력)" />
+        <input type="text" name="store" required value="{{ selected_store }}" autocomplete="off" placeholder="테마명 일부만 입력 or 띄어쓰기 없이 입력"/>
       </label>
 
       <button class="submit-btn" type="submit">조회하기</button>
@@ -178,8 +178,8 @@
 
           <!-- 매장명 -->
           <div class="store-name-result">
-            {% if result.memo_link %}
-              <a href="{{ result.memo_link }}" target="_blank">[ {{ result.name }} ]</a>
+            {% if result.memo %}
+              <a href="{{ result.memo }}" target="_blank">[ {{ result.name }} ]</a>
             {% else %}
               {{ result.name }}
             {% endif %}
@@ -188,13 +188,7 @@
           <!-- 마감일 -->
           <div class="deadline-result">{{ result.deadline }}</div>
 
-          <!-- 메모 -->
-          {% if result.memo %}
-            <div style="margin-top: 6px; font-size: 0.9em;">
-              {{ result.memo | safe }}
-            </div>
-          {% endif %}
-
+        
           <!-- 시간표 링크 -->
           {% if result.theme_id %}
             <br />
