@@ -1,10 +1,28 @@
 import sqlite3
 import re
+import os
 from flask import Flask, render_template, request, g, abort
 from datetime import datetime, timedelta
 
 app = Flask(__name__)
 DATABASE = "database.db"
+
+POSTER_DIR = os.path.join(app.root_path, "static", "posters")
+
+def get_poster_filename(theme_id):
+    """
+    static/posters 폴더에서 theme_id.xxx 파일 자동 탐색
+    jpg / png / gif / jpeg / webp 지원
+    """
+    extensions = ["jpg", "png", "gif", "jpeg", "webp"]
+
+    for ext in extensions:
+        filename = f"{theme_id}.{ext}"
+        full_path = os.path.join(POSTER_DIR, filename)
+        if os.path.exists(full_path):
+            return filename
+
+    return None
 
 
 # --------------------------
@@ -159,13 +177,26 @@ def theme_detail(theme_id):
     if not theme:
         abort(404)
 
+    # Row → dict
+    theme = dict(theme)
+
+    # ✅ 포스터 파일에 쓸 key 결정
+    #   themes 테이블에 theme_id 컬럼이 있으면 그걸 우선 사용,
+    #   없으면 id 컬럼 사용
+    poster_key = theme.get("theme_id", theme_id)
+
+    # ✅ 포스터 파일 자동 탐색
+    theme["poster_file"] = get_poster_filename(poster_key)
+
     schedule_weekday = format_schedule(theme['time_table_weekday'], theme['play_time'])
     schedule_weekend = format_schedule(theme['time_table_weekend'], theme['play_time'])
 
-    return render_template("theme_detail.html",
-                           theme=theme,
-                           schedule_weekday=schedule_weekday,
-                           schedule_weekend=schedule_weekend)
+    return render_template(
+        "theme_detail.html",
+        theme=theme,
+        schedule_weekday=schedule_weekday,
+        schedule_weekend=schedule_weekend
+    )
 
 
 # --------------------------

@@ -28,13 +28,9 @@
 
         /* #이용지점~이용금액 텍스트 */
         .info {
-            margin: 10px 0;
+            margin: 8px 0;
             font-size: 2.0rem;
-            text-align: left;  /* ← 왼쪽 정렬로 강제 */
-            width: 100%;
-            max-width: 720px;  /* 박스 폭에 맞게 */
-            box-sizing: border-box;
-            padding: 0 12px;
+            text-align: left;   /* 왼쪽 정렬 */
         }
 
         .info strong {
@@ -49,11 +45,9 @@
             box-shadow: 0 4px 24px rgba(0,0,0,0.08);
             width: 95vw;
             max-width: 800px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
             margin: 40px auto 60px;
         }
+
 
         /* #반응형 모바일에서 padding 조절 */
         @media (max-width: 500px) {
@@ -114,22 +108,87 @@
         a.back-link:hover {
             text-decoration: underline;
         }
+        /* 제목 중앙 유지 */
+        .theme-title {
+            text-align: center;
+            margin-bottom: 14px;
+        }
+
+        /* 정보 + 포스터 한 줄 layout */
+        .theme-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 20px;
+            width: 90%;       /* ⬅ 시간표 박스랑 같은 폭 */
+            margin: 0 auto;   /* ⬅ 가운데 정렬 */
+        }
+
+        /* 왼쪽 정보 */
+        .theme-info-block {
+            flex: 1;
+            text-align: left;
+        }
+
+        /* 포스터 wrapper */
+        .theme-poster {
+            width: 120px;          
+            height: 180px;         /* ⭐ 세로 포스터 대응 높이 증가 */
+            display: flex;
+            justify-content: center;
+            align-items: center;   /* 세로 가운데 정렬 */
+            padding-right: 15px;   /* 요청한 오른쪽 여백 */
+        }
+
+        /* 포스터 이미지 (폭 고정, 높이 자동) */
+        .theme-poster img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            border-radius: 10px;
+        }
+
+        /* 왼쪽 정보 */
+        .theme-info-block {
+            flex: 1;
+            text-align: left;
+            padding-left: 0px;   /* ⬅ 들여쓰기 */
+        }
+
+        /* 모바일에서 폭만 살짝 줄이기 */
+        @media (max-width: 600px) {
+            .theme-poster img {
+                width: 90px;  /* 모바일용 폭 */
+            }
+        }
+
+
 
     </style>
 </head>
 <body>
     <div class="center-box">
-        <h1>{{ theme.theme_name }}</h1>
 
-        <div class="info">
-            <strong>🎡이용지점 :</strong> {{ theme.store_name }}
+        <!-- 제목은 그대로 중앙 -->
+        <h1 class="theme-title">{{ theme.theme_name }}</h1>
+
+        <!-- 정보 + 포스터 묶는 박스 -->
+        <div class="theme-top">
+            
+            <!-- 왼쪽 정보 -->
+            <div class="theme-info-block">
+                <div class="info"><strong>🎡 이용지점 :</strong> {{ theme.store_name }}</div>
+                <div class="info"><strong>⏱️ 이용시간 :</strong> {{ theme.play_time }}분</div>
+                <div class="info"><strong>💰 이용금액 :</strong> {{ theme.price }}</div>
+            </div>
+
+        <!-- 오른쪽 포스터 -->
+        {% if theme.poster_file %}
+        <div class="theme-poster">
+            <img src="{{ url_for('static', filename='posters/' ~ theme.poster_file) }}" alt="포스터 이미지">
         </div>
-        <div class="info">
-            <strong>⏱️이용시간 :</strong> {{ theme.play_time }}분
-        </div>
-        <div class="info">
-            <strong>💰이용금액 :</strong> {{ theme['price'] if theme['price'] else "정보 없음" }}
-        </div>
+        {% endif %}
+    </div>
 
         {% if schedule_weekday == schedule_weekend %}
             <!-- 평일/주말 동일한 시간표 -->
