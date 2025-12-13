@@ -50,7 +50,7 @@ def import_csv():
                     row['store_name'].strip(),
                     row['theme_id'].strip(),
                     row['theme_name'].strip(),
-                    row['keywords'].strip(),
+                    ",".join(k.strip().lower() for k in row['keywords'].split(",")),
                     int(row['play_time'].strip()) if row['play_time'].strip().isdigit() else 0,
                     row['price'].strip(),
                     row['time_table_weekday'].strip(),
