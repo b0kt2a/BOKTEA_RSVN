@@ -24,7 +24,10 @@ with open('stores.csv', newline='', encoding='utf-8-sig') as csvfile:
     for row in reader:
         name = row.get('name', '').strip()
         print(f"▶ name_raw: '{row.get('name')}' → name: '{name}'")  # 디버깅용 출력 추가
-        keywords = row.get('keywords', '').strip()
+        keywords = ",".join(
+            k.strip().lower()
+            for k in row.get('keywords', '').split(',')
+        )
         always_open_raw = row.get('always_open', '').strip().lower()
         fixed_note = row.get('fixed_note', '').strip()
         memo = row.get('memo', '').strip()
