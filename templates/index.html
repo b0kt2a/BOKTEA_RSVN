@@ -191,7 +191,15 @@
           </div>
 
           <!-- 마감일 -->
-          <div class="deadline-result">{{ result.deadline }}</div>
+          <div class="deadline-result">
+          {{ result.deadline }}
+          {% if result.deadline == "상시 예약 가능" %}
+              <br>
+              <span class="deadline-sub">
+                  예약가능일 30일초과 매장은 상시예약가능으로 분류됩니다.
+              </span>
+          {% endif %}
+          </div>
 
         
           <!-- 시간표 링크 -->

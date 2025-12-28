@@ -123,7 +123,7 @@ def index():
                 deadline = deadline_date.strftime('%Y년 %m월 %d일 ') + store['deadline_time']
 
             else:
-                  deadline = store['fixed_note'] or "상시예약가능"
+                  deadline = store['fixed_note'] or "상시 예약 가능"
                   deadline_sub = "예약가능일 30일초과 매장은 상시예약가능으로 분류됩니다."
 
            
