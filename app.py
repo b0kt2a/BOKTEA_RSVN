@@ -115,7 +115,7 @@ def index():
 
             # --- 마감일 계산 ---
             if store['always_open'] and int(store['always_open']) == 1:
-                deadline = store['fixed_note'] or "상시 예약 가능"
+                deadline = store['fixed_note'] or "상시 예약 가능<br>예약가능일 30일 초과 매장은 상시 예약으로 분류됩니다."
 
             elif store['deadline_days'] is not None and store['deadline_time']:
                 d = datetime.strptime(selected_date, '%Y-%m-%d')
