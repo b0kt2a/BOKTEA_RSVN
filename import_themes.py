@@ -62,7 +62,7 @@ def import_csv():
 
     conn.commit()
     conn.close()
-    print("✅ themes 테이블에 데이터 입력 완료 (price=문자열모드)")
+    print("✅ themes.csv → 데이터 입력 완료")
 
 if __name__ == '__main__':
     create_table()

@@ -23,7 +23,6 @@ with open('stores.csv', newline='', encoding='utf-8-sig') as csvfile:
     reader = csv.DictReader(csvfile)
     for row in reader:
         name = row.get('name', '').strip()
-        print(f"▶ name_raw: '{row.get('name')}' → name: '{name}'")  # 디버깅용 출력 추가
         keywords = ",".join(
             k.strip().lower()
             for k in row.get('keywords', '').split(',')
