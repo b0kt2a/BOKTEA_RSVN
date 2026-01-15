@@ -203,7 +203,18 @@
 
         
           <!-- 시간표 링크 -->
-          {% if result.theme_id %}
+          {% if result.themes and result.themes|length > 0 %}
+            <br />
+            <div style="margin-top: 10px;">
+              🔍
+              {% for t in result.themes %}
+                <a href="{{ url_for('theme_detail', theme_id=t['id']) }}">
+                  [ {{ t['theme_name'] }} ] 시간표 보기
+                </a>
+                {% if not loop.last %}<br />{% endif %}
+              {% endfor %}
+            </div>
+          {% elif result.theme_id %}
             <br />
             <div style="margin-top: 10px;">
               🔍

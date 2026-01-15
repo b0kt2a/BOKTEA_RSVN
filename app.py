@@ -9,6 +9,17 @@ DATABASE = "database.db"
 
 POSTER_DIR = os.path.join(app.root_path, "static", "posters")
 
+def normalize_query(s: str) -> str:
+    if not s:
+        return ""
+    s = s.strip()
+    # 공백 제거
+    s = re.sub(r"\s+", "", s)
+    # 특수문자 제거(원하면 빼도 됨)
+    s = re.sub(r"[^0-9a-zA-Z가-힣]", "", s)
+    return s
+
+
 def get_poster_filename(theme_id):
     """
     static/posters 폴더에서 theme_id.xxx 파일 자동 탐색
@@ -88,13 +99,20 @@ def index():
     if request.method == 'POST':
         selected_date = request.form['date']
         selected_store = request.form['store'].strip()
+        raw_query = selected_store
+        q = normalize_query(raw_query)
+
 
         # ✔ 매장 검색은 keywords ONLY
-        stores = db.execute('''
+        stores = db.execute(
+            '''
             SELECT *
             FROM stores
-            WHERE keywords LIKE ?
-        ''', (f"%{selected_store}%",)).fetchall()
+            WHERE REPLACE(keywords, ' ', '') LIKE ?
+            ''',
+            (f"%{q}%",)
+        ).fetchall()
+
 
         # -----------------------------------------------------------------
         # 🔥 매장 자체가 한 개도 없으면 → 바로 에러 반환
@@ -129,34 +147,36 @@ def index():
            
 
             # ✔ store_name 부분 일치로 테마 찾기
-            theme_match = db.execute('''
+            theme_matches = db.execute('''
                 SELECT id, theme_name
                 FROM themes
                 WHERE store_name LIKE ?
-                  AND (keywords LIKE ? OR theme_name LIKE ?)
-                ORDER BY id LIMIT 1
-            ''', (f"%{store['name']}%", f"%{selected_store}%", f"%{selected_store}%")).fetchone()
+                AND (
+                    REPLACE(keywords, ' ', '') LIKE ?
+                    OR REPLACE(theme_name, ' ', '') LIKE ?
+                )
+                ORDER BY id
+            ''', (f"%{store['name']}%", f"%{q}%", f"%{q}%")).fetchall()
 
-            theme_id = theme_match['id'] if theme_match else None
-            theme_name = theme_match['theme_name'] if theme_match else None
+            first = theme_matches[0] if theme_matches else None
 
             reservation_results.append({
                 'name': store['name'],
                 'deadline': deadline,
-                
-                'theme_id': theme_id,
-                'theme_name': theme_name,
+                'theme_id': first['id'] if first else None,
+                'theme_name': first['theme_name'] if first else None,
+                'themes': theme_matches,  # ✅ 추가 (여러개)
                 'memo': store['memo']
             })
-
         # -----------------------------------------------------------------
         # 🔽 하단 테마 검색 (선택사항)
         # -----------------------------------------------------------------
         theme_results = db.execute('''
             SELECT *
             FROM themes
-            WHERE keywords LIKE ? OR theme_name LIKE ?
-        ''', (f"%{selected_store}%", f"%{selected_store}%")).fetchall()
+            WHERE REPLACE(keywords, ' ', '') LIKE ?
+            OR REPLACE(theme_name, ' ', '') LIKE ?
+        ''', (f"%{q}%", f"%{q}%")).fetchall()
 
     return render_template(
         "index.html",
