@@ -45,7 +45,19 @@ def parse_closed_days(raw):
     parts = [p.strip() for p in s.split(",") if p.strip()]
     return set(parts)
 
+def get_week_labels(weekend_start):
+    try:
+        ws = int(weekend_start)
+    except (TypeError, ValueError):
+        ws = 6  # 기본값: 토~일 주말
 
+    if ws == 5:
+        return "월~목", "금~일"
+    elif ws == 6:
+        return "월~금", "토~일"
+    else:
+        return "월~금", "토~일"
+        
 # --------------------------
 # DB 연결
 # --------------------------
