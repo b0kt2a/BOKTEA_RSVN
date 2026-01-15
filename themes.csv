@@ -1,4 +1,4 @@
-﻿store_id,store_name,theme_id,theme_name,keywords,play_time,price,time_table_weekday,time_table_Friday,time_table_weekend,weekend_start,closed_day
+﻿store_id,store_name,theme_id,theme_name,keywords,play_time,price,time_table_weekday,time_table_Friday,time_table_weekend,weekend_start,closed_days
 33_kd,PLAY33 건대점,33_kd1,다이얼,다이얼,60,"1인 27,000원","1100,1215,1330,1445,1600,1715,1830,1945,2100,2215",,"0950,1100,1210,1320,1430,1540,1650,1800,1910,2020,2130,2240",5,
 st_esc,STUDIO ESC,st_esc1,하얀마법사,"하마,흰마,하얀마법사",75,"1인 28,000원","1035,1215,1355,1535,1715,1855,2035,2215",,"0945,1120,1255,1430,1605,1740,1915,2050,2225",,
 st_esc,STUDIO ESC,st_esc2,검은마법사,"검마,검은마법사",75,"1인 28,000원","1020,1200,1340,1520,1700,1840,2020,2200",,"0930,1105,1240,1415,1550,1725,1900,2035,2210",,
