@@ -190,22 +190,23 @@
         {% endif %}
     </div>
         
-        {% if closed_days and closed_days|length > 0 %}
-            <div style="
-                width: 90%;
-                margin: 0 auto 12px;
-                text-align: center;
-                font-size: 1.6rem;
-                color: #666;
-            ">
-                🚫 정기휴무: {{ closed_days|join(', ') }}
-            </div>
-            {% endif %}
+        
 
         {% if schedule_weekday == schedule_weekend %}
             <!-- 평일/주말 동일한 시간표 -->
             <div class="schedule-box">
                 <h3>시간표</h3>
+                {% if closed_days and closed_days|length > 0 %}
+                        <div style="
+                            margin-top: 6px;
+                            margin-bottom: 10px;
+                            text-align: center;
+                            font-size: 1.2rem;
+                            color: #666;
+                        ">
+                            🚫 정기휴무: {{ closed_days|join(', ') }}
+                        </div>
+                        {% endif %}
                 <p>※ 평일/주말 시간표 동일</p>
                 <table class="timetable">
                     <thead>
@@ -229,6 +230,17 @@
             <!-- 평일 시간표 -->
             <div class="schedule-box">
                 <h3>평일 시간표 ({{ weekday_label }})</h3>
+                    {% if closed_days and closed_days|length > 0 %}
+                        <div style="
+                            margin-top: 6px;
+                            margin-bottom: 10px;
+                            text-align: center;
+                            font-size: 1.2rem;
+                            color: #666;
+                        ">
+                            🚫 정기휴무: {{ closed_days|join(', ') }}
+                        </div>
+                        {% endif %}
                 <table class="timetable">
                                 <thead>
                         <tr>

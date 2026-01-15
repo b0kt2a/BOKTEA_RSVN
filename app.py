@@ -37,13 +37,15 @@ def get_poster_filename(theme_id):
 
 def parse_closed_days(raw):
     if not raw:
-        return set()
+        return []
     s = str(raw).strip()
     if not s:
-        return set()
-    # "수, 목" 같은 입력 허용
+        return []
     parts = [p.strip() for p in s.split(",") if p.strip()]
-    return set(parts)
+
+    order = {"월":0, "화":1, "수":2, "목":3, "금":4, "토":5, "일":6}
+    parts = sorted(set(parts), key=lambda x: order.get(x, 99))
+    return parts
 
 def get_week_labels(weekend_start):
     try:
@@ -57,7 +59,7 @@ def get_week_labels(weekend_start):
         return "월~금", "토~일"
     else:
         return "월~금", "토~일"
-        
+
 # --------------------------
 # DB 연결
 # --------------------------
