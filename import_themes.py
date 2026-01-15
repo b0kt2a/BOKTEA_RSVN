@@ -21,7 +21,10 @@ def create_table():
             play_time INTEGER,
             price TEXT,
             time_table_weekday TEXT,
-            time_table_weekend TEXT
+            time_table_friday TEXT,
+            time_table_weekend TEXT,
+            weekend_start INTEGER,
+            closed_days TEXT
         )
     ''')
     conn.commit()
@@ -43,8 +46,9 @@ def import_csv():
                 c.execute('''
                     INSERT INTO themes (
                         store_id, store_name, theme_id, theme_name, keywords,
-                        play_time, price, time_table_weekday, time_table_weekend
-                    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+                        play_time, price, time_table_weekday, time_table_friday, time_table_weekend,
+                        weekend_start, closed_days
+                    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
                 ''', (
                     row['store_id'].strip(),
                     row['store_name'].strip(),
@@ -53,8 +57,11 @@ def import_csv():
                     ",".join(k.strip().lower() for k in row['keywords'].split(",")),
                     int(row['play_time'].strip()) if row['play_time'].strip().isdigit() else 0,
                     row['price'].strip(),
-                    row['time_table_weekday'].strip(),
-                    row['time_table_weekend'].strip()
+                    row.get('time_table_weekday', '').strip(),
+                    row.get('time_table_friday', '').strip(),   # ✅ 추가
+                    row.get('time_table_weekend', '').strip(),
+                    int(row.get('weekend_start', '6').strip() or 6),  # ✅ 추가 (없으면 6)
+                    row.get('closed_days', '').strip()          # ✅ 추가
                 ))
             except Exception as e:
                 print(f"❌ 오류 발생한 행: {row}")
