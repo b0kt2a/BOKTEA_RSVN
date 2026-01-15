@@ -204,8 +204,7 @@
         
           <!-- 시간표 링크 -->
           {% if result.themes and result.themes|length > 0 %}
-            <br />
-            <div style="margin-top: 10px;">
+            <div style="margin-top: 5px; margin-bottom: 14px;">
               🔍
               {% for t in result.themes %}
                 <a href="{{ url_for('theme_detail', theme_id=t['id']) }}">
@@ -216,7 +215,7 @@
             </div>
           {% elif result.theme_id %}
             <br />
-            <div style="margin-top: 10px;">
+            <div style="margin-top: 5px; margin-bottom: 14px;">
               🔍
               <a href="{{ url_for('theme_detail', theme_id=result.theme_id) }}">
                 [ {{ result.theme_name }} ] 시간표 보기
