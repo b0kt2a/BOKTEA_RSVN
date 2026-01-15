@@ -50,4 +50,4 @@ with open('stores.csv', newline='', encoding='utf-8-sig') as csvfile:
 conn.commit()
 conn.close()
 
-print("✅ stores.csv → 예약시간 입력 완료")
+print("✅ stores.csv → 데이터 입력 완료")

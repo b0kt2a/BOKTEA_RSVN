@@ -35,6 +35,16 @@ def get_poster_filename(theme_id):
 
     return None
 
+def parse_closed_days(raw):
+    if not raw:
+        return set()
+    s = str(raw).strip()
+    if not s:
+        return set()
+    # "수, 목" 같은 입력 허용
+    parts = [p.strip() for p in s.split(",") if p.strip()]
+    return set(parts)
+
 
 # --------------------------
 # DB 연결
@@ -54,6 +64,18 @@ def close_db(exception):
 
 
 
+# --------------------------
+# 요일 라벨 계산
+# --------------------------
+def get_week_labels(weekend_start):
+    try:
+        weekend_start = int(weekend_start)
+    except:
+        weekend_start = 6  # 기본: 토~일
+
+    if weekend_start == 5:
+        return "월~목", "금~일"
+    return "월~금", "토~일"
 
 # --------------------------
 # 시간 계산
@@ -201,6 +223,16 @@ def theme_detail(theme_id):
     # Row → dict
     theme = dict(theme)
 
+    # 기본 라벨 (weekend_start 기준)
+    weekday_label, weekend_label = get_week_labels(theme.get("weekend_start"))
+
+    closed_days = parse_closed_days(theme.get("closed_days"))
+
+    # 🔥 금요일 시간표가 따로 있으면 라벨 자동 조정
+    if theme.get("time_table_friday") and str(theme.get("time_table_friday")).strip():
+        weekday_label = "월~목"
+    
+
     # ✅ 포스터 파일에 쓸 key 결정
     #   themes 테이블에 theme_id 컬럼이 있으면 그걸 우선 사용,
     #   없으면 id 컬럼 사용
@@ -209,14 +241,19 @@ def theme_detail(theme_id):
     # ✅ 포스터 파일 자동 탐색
     theme["poster_file"] = get_poster_filename(poster_key)
 
-    schedule_weekday = format_schedule(theme['time_table_weekday'], theme['play_time'])
-    schedule_weekend = format_schedule(theme['time_table_weekend'], theme['play_time'])
+    schedule_weekday = format_schedule(theme.get('time_table_weekday'), theme['play_time'])
+    schedule_friday  = format_schedule(theme.get('time_table_friday'), theme['play_time'])
+    schedule_weekend = format_schedule(theme.get('time_table_weekend'), theme['play_time'])
 
     return render_template(
         "theme_detail.html",
         theme=theme,
         schedule_weekday=schedule_weekday,
-        schedule_weekend=schedule_weekend
+        schedule_friday=schedule_friday,
+        schedule_weekend=schedule_weekend,
+        weekday_label=weekday_label,
+        weekend_label=weekend_label,
+        closed_days=closed_days
     )
 
 

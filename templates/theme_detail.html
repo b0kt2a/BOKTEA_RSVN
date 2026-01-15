@@ -189,6 +189,18 @@
         </div>
         {% endif %}
     </div>
+        
+        {% if closed_days and closed_days|length > 0 %}
+            <div style="
+                width: 90%;
+                margin: 0 auto 12px;
+                text-align: center;
+                font-size: 1.6rem;
+                color: #666;
+            ">
+                🚫 정기휴무: {{ closed_days|join(', ') }}
+            </div>
+            {% endif %}
 
         {% if schedule_weekday == schedule_weekend %}
             <!-- 평일/주말 동일한 시간표 -->
@@ -216,9 +228,9 @@
         {% else %}
             <!-- 평일 시간표 -->
             <div class="schedule-box">
-                <h3>평일 시간표</h3>
+                <h3>평일 시간표 ({{ weekday_label }})</h3>
                 <table class="timetable">
-                    <thead>
+                                <thead>
                         <tr>
                             <th>시작시간</th>
                             <th>종료시간</th>
@@ -236,9 +248,33 @@
                 </table>
             </div>
 
+            <!-- 금요일 시간표 -->
+            {% if theme.time_table_friday and theme.time_table_friday|trim %}
+            <div class="schedule-box">
+                <h3>금요일 시간표</h3>
+                <table class="timetable">
+                <thead>
+                    <tr>
+                    <th>시작시간</th>
+                    <th>종료시간</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for line in schedule_friday.split('\n') %}
+                    {% set parts = line.split(' ~ ') %}
+                    <tr>
+                        <td>{{ parts[0] }}</td>
+                        <td>{{ parts[1] }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+                </table>
+            </div>
+            {% endif %}
+
             <!-- 주말 시간표 -->
             <div class="schedule-box">
-                <h3>주말 시간표</h3>
+                <h3>주말 시간표 ({{ weekend_label }})</h3>
                 <table class="timetable">
                     <thead>
                         <tr>
