@@ -237,6 +237,20 @@ def theme_detail(theme_id):
     # Row → dict
     theme = dict(theme)
 
+    price_raw = (theme.get("price") or "").strip()
+
+    # 기본은 원문 그대로
+    price_display = price_raw
+
+    # 특정 문구만 줄바꿈 처리
+    if "인원수에 따라 상이" in price_raw:
+        price_display = price_raw.replace(
+            "인원수에 따라 상이",
+            "인원수에 따라 상이<br>"
+        )
+
+    theme["price_display"] = price_display
+
     # 기본 라벨 (weekend_start 기준)
     weekday_label, weekend_label = get_week_labels(theme.get("weekend_start"))
 
@@ -246,7 +260,7 @@ def theme_detail(theme_id):
     if theme.get("time_table_friday") and str(theme.get("time_table_friday")).strip():
         weekday_label = "월~목"
     
-
+    
     # ✅ 포스터 파일에 쓸 key 결정
     #   themes 테이블에 theme_id 컬럼이 있으면 그걸 우선 사용,
     #   없으면 id 컬럼 사용
