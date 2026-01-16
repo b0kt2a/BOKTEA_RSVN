@@ -241,9 +241,11 @@ def theme_detail(theme_id):
 
     price_display = price_raw
 
-    # 괄호 앞에서 줄바꿈
     if " (" in price_raw:
-        price_display = price_raw.replace(" (", "<br>(")
+        price_display = price_raw.replace(
+            " (",
+            '<br><span class="price-sub">('
+        ) + '</span>'
 
     theme["price_display"] = price_display
 
