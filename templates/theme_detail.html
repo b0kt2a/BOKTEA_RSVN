@@ -155,6 +155,11 @@
             padding-left: 0px;   /* ⬅ 들여쓰기 */
         }
 
+        .price-detail {
+            display: inline-block;
+            margin-left: 28px;
+            }
+
         /* 모바일에서 폭만 살짝 줄이기 */
         @media (max-width: 600px) {
             .theme-poster img {
@@ -179,7 +184,7 @@
             <div class="theme-info-block">
                 <div class="info"><strong>🎡 이용지점 :</strong> {{ theme.store_name }}</div>
                 <div class="info"><strong>⏱️ 이용시간 :</strong> {{ theme.play_time }}분</div>
-                <div class="info"><strong>💰 이용금액 :</strong> {{ theme.price_display | safe }}</div>
+                <div class="info"><strong>💰 이용금액 :</strong> <span class="price-detail">{{ theme.price_display | safe }}</span></div>
             </div>
 
         <!-- 오른쪽 포스터 -->
