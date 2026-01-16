@@ -239,15 +239,11 @@ def theme_detail(theme_id):
 
     price_raw = (theme.get("price") or "").strip()
 
-    # 기본은 원문 그대로
     price_display = price_raw
 
-    # 특정 문구만 줄바꿈 처리
-    if "인원수에 따라 상이" in price_raw:
-        price_display = price_raw.replace(
-            "인원수에 따라 상이",
-            "인원수에 따라 상이<br>"
-        )
+    # 괄호 앞에서 줄바꿈
+    if " (" in price_raw:
+        price_display = price_raw.replace(" (", "<br>(")
 
     theme["price_display"] = price_display
 
