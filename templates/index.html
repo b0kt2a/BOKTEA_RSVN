@@ -84,14 +84,27 @@
 
     .request-form{
       display:flex;
-      gap:8px;
+      gap:10px;
       align-items:center;
+      justify-content:center;
       margin-top:12px;
     }
 
-    /* 핵심 한 줄 */
+    /* input은 남은 공간 먹기 */
     .request-form input[type="text"]{
       flex:1;
+      width:auto !important;  /* 기존 width:100% !important 덮기 */
+      margin-top:0;           /* 기존 margin-top:5px 제거 */
+    }
+
+    /* 버튼이 100%로 늘어나는 걸 막기 */
+    .request-form .submit-btn{
+      width:auto !important;  /* 기존 버튼 full width 덮기 */
+      flex:0 0 auto;
+      margin-top:0;           /* 혹시 있으면 제거 */
+      white-space:nowrap;
+      padding:0 16px;         /* 버튼 폭 자연스럽게 */
+      height:48px;            /* input이 48px라 맞추기 */
     }
 
     .submit-btn {
@@ -189,23 +202,20 @@
         
     <!-- 요청 입력 -->
     <form
+      class="request-form"
       action="https://docs.google.com/forms/d/e/1FAIpQLSd3O4Yf7q9JMXlk0OwrCEAKkr9bLO9Lkixt31jX2fOX5S2HyA/formResponse"
       method="POST"
       target="hidden_iframe"
-      class="request-form"
     >
       <input
         type="text"
         name="entry.2028533285"
-        placeholder="테마명 일부만 입력 or 띄어쓰기 없이 입력"
+        placeholder="매장명 또는 테마명 입력"
         autocomplete="off"
         required
       />
-      <button type="submit" class="submit-btn">
-        요청하기
-      </button>
+      <button type="submit" class="submit-btn">요청하기</button>
     </form>
-
     <iframe name="hidden_iframe" style="display:none;"></iframe>
 
       {% endif %}
