@@ -82,6 +82,18 @@
       border-color: #3d5af1;
     }
 
+    .request-form{
+      display:flex;
+      gap:8px;
+      align-items:center;
+      margin-top:12px;
+    }
+
+    /* 핵심 한 줄 */
+    .request-form input[type="text"]{
+      flex:1;
+    }
+
     .submit-btn {
       width: 100%;
       padding: 12px 0;
@@ -160,7 +172,7 @@
 
       <label>
         테마명으로 검색해 주세요
-        <input type="text" name="store" required value="{{ selected_store }}" autocomplete="off" placeholder="테마명 일부만 입력 or 띄어쓰기 없이 입력"/>
+        <input type="text" name="store" required value="{{ selected_store }}" autocomplete="off" placeholder="테마명 일부 or 약자 가능 (e.g. 상자, 그없상)"/>
       </label>
 
       <button class="submit-btn" type="submit">조회하기</button>
@@ -180,35 +192,22 @@
       action="https://docs.google.com/forms/d/e/1FAIpQLSd3O4Yf7q9JMXlk0OwrCEAKkr9bLO9Lkixt31jX2fOX5S2HyA/formResponse"
       method="POST"
       target="hidden_iframe"
-      style="margin-top:12px; display:flex; justify-content:center; gap:8px;"
+      class="request-form"
     >
       <input
         type="text"
         name="entry.2028533285"
-        placeholder="매장명/테마명을 입력해 주세요"
+        placeholder="테마명 일부만 입력 or 띄어쓰기 없이 입력"
+        autocomplete="off"
         required
-        style="
-          width:260px;
-          padding:10px;
-          border-radius:10px;
-          border:1px solid #ccc;
-          font-size:14px;
-        "
       />
-      <button
-        type="submit"
-        style="
-          padding:10px 14px;
-          border-radius:10px;
-          font-size:14px;
-          cursor:pointer;
-        "
-      >
+      <button type="submit" class="submit-btn">
         요청하기
       </button>
     </form>
 
     <iframe name="hidden_iframe" style="display:none;"></iframe>
+
       {% endif %}
     {% else %}
 
