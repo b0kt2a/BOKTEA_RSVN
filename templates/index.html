@@ -293,24 +293,36 @@
 
       if (!form || !input) return;
 
-      // 빈 값이면 제출 안 함
       if (!input.value.trim()) {
         input.focus();
         return;
       }
 
-      // ✅ 실제 제출 강제 실행
+      // ✅ 실제 제출
       form.submit();
 
-      // ✅ 완료 UI 표시
+      // ✅ UI 전환
       const area = document.getElementById("request-area");
       const done = document.getElementById("request-done");
       if (area) area.style.display = "none";
       if (done) done.style.display = "block";
 
-      // 입력칸 비우기
       input.value = "";
     }
+
+    // 🔥 엔터 키 감지 (onsubmit 대체)
+    document.addEventListener("DOMContentLoaded", () => {
+      const input = document.querySelector('input[name="entry.2028533285"]');
+      if (!input) return;
+
+      input.addEventListener("keydown", (e) => {
+        if (e.key === "Enter") {
+          e.preventDefault(); // 기본 submit 막기
+          submitRequestForm(); // 👉 클릭과 동일 동작
+        }
+      });
+    });
   </script>
+
 </body>
 </html>
