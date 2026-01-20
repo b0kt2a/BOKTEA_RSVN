@@ -212,7 +212,7 @@
               autocomplete="off"
             />
 
-            <button class="submit-btn" type="submit" onclick="showRequestDone()">
+            <button class="submit-btn" type="button" onclick="submitRequestForm()">
               요청하기
             </button>
           </form>
@@ -287,16 +287,29 @@
   </footer>
 
   <script>
-    function showRequestDone() {
+    function submitRequestForm() {
+      const form = document.getElementById("request-form");
+      const input = document.querySelector('input[name="entry.2028533285"]');
+
+      if (!form || !input) return;
+
+      // 빈 값이면 제출 안 함
+      if (!input.value.trim()) {
+        input.focus();
+        return;
+      }
+
+      // ✅ 실제 제출 강제 실행
+      form.submit();
+
+      // ✅ 완료 UI 표시
       const area = document.getElementById("request-area");
       const done = document.getElementById("request-done");
-
       if (area) area.style.display = "none";
       if (done) done.style.display = "block";
 
-      // 입력칸 정리(안 보여도 깔끔하게)
-      const input = document.querySelector('input[name="entry.2028533285"]');
-      if (input) input.value = "";
+      // 입력칸 비우기
+      input.value = "";
     }
   </script>
 </body>
