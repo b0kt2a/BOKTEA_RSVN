@@ -195,7 +195,13 @@
             required
             autocomplete="off"
           />
-          <button class="submit-btn" type="submit">요청하기</button>
+          <button
+            class="submit-btn"
+            type="submit"
+            onclick="showRequestDone()"
+          >
+            요청하기
+          </button>
         </form>
 
         <iframe name="hidden_iframe" style="display:none;"></iframe>
@@ -266,19 +272,12 @@
   </footer>
 
   <script>
-    function handleRequestSubmit(){
-      const area = document.getElementById("request-area");
-      const done = document.getElementById("request-done");
-
-      // 화면 전환
-      if (area) area.style.display = "none";
-      if (done) done.style.display = "block";
-
-      // 값 비우기(안 보이지만 깔끔하게)
-      const input = document.querySelector('input[name="entry.2028533285"]');
-      if (input) input.value = "";
-
-      return true; // ✅ 이게 없으면 브라우저/상황에 따라 제출이 막힐 수 있어
+    function showRequestDone() {
+      // 살짝 딜레이 주고 표시 (submit과 충돌 방지)
+      setTimeout(() => {
+        const msg = document.getElementById("request-done");
+        if (msg) msg.style.display = "block";
+      }, 100);
     }
   </script>
 
