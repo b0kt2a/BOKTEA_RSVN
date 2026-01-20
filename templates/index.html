@@ -175,12 +175,14 @@
 
     {% if not results %}
       {% if error %}
-        <!-- 🔹 요청 영역 wrapper -->
+      <!-- 요청 영역 wrapper -->
       <div id="request-area">
+
         <p style="color:#ff5277; font-weight:600; margin-top:20px; text-align:center;">
           {{ error | safe }}
         </p>
 
+        <!-- 요청 입력(구글폼) -->
         <form
           id="request-form"
           action="https://docs.google.com/forms/d/e/1FAIpQLSd3O4Yf7q9JMXlk0OwrCEAKkr9bLO9Lkixt31jX2fOX5S2HyA/formResponse"
@@ -195,11 +197,8 @@
             required
             autocomplete="off"
           />
-          <button
-            class="submit-btn"
-            type="submit"
-            onclick="showRequestDone()"
-          >
+
+          <button class="submit-btn" type="submit" onclick="showRequestDone()">
             요청하기
           </button>
         </form>
@@ -207,9 +206,11 @@
         <iframe name="hidden_iframe" style="display:none;"></iframe>
       </div>
 
+      <!-- 요청 완료 메시지 -->
       <p id="request-done"
-        style="display:none; margin-top:20px; text-align:center; color:#6b0ca1; font-weight:600;">
-        ✔️요청이 완료되었어요👍🏻<br>빠른시일내에 업뎃할게요🤗
+        style="display:none; margin-top:20px; text-align:center; color:#3d5af1; font-weight:600;">
+        ✔️ 요청이 완료되었어요 👍<br>
+        빠른 시일내에 업데이트할게요 🤗
       </p>
       {% endif %}
     {% else %}
@@ -272,12 +273,16 @@
   </footer>
 
   <script>
-    function showRequestDone() {
-      // 살짝 딜레이 주고 표시 (submit과 충돌 방지)
-      setTimeout(() => {
-        const msg = document.getElementById("request-done");
-        if (msg) msg.style.display = "block";
-      }, 100);
+    function showRequestDone(){
+      const area = document.getElementById("request-area");
+      const done = document.getElementById("request-done");
+
+      if (area) area.style.display = "none";
+      if (done) done.style.display = "block";
+
+      // 입력칸 정리(안 보여도 깔끔하게)
+      const input = document.querySelector('input[name="entry.2028533285"]');
+      if (input) input.value = "";
     }
   </script>
 
