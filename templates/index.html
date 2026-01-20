@@ -82,32 +82,7 @@
       border-color: #3d5af1;
     }
 
-    .request-form{
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      gap:10px;
-      margin-top:12px;
-      flex-wrap:nowrap; /* ⭐ 줄바꿈 금지 */
-    }
-
-    /* input이 줄 독점 못 하게 */
-    .request-form input[type="text"]{
-      flex:1;
-      width:auto !important;   /* ⭐ 핵심 */
-      min-width:0;             /* ⭐ flex 줄바꿈 방지 필수 */
-      margin-top:0;
-    }
-
-    /* 버튼은 옆에서 자기 크기만 */
-    .request-form .submit-btn{
-      width:auto !important;
-      flex:0 0 auto;
-      white-space:nowrap;
-      height:48px;
-      margin-top:0;
-    }
-    .submit-btn {
+        .submit-btn {
       width: 100%;
       padding: 12px 0;
       background: #3d5af1;
@@ -170,6 +145,7 @@
         font-size: 16px;
       }
     }
+
   </style>
 </head>
 
@@ -195,29 +171,42 @@
 
     {% if not results %}
       {% if error %}
-        <p style="color: #ff5277; font-weight:600; margin-top: 20px; text-align:center;">
-          {{ error | safe }}
+        <!-- 🔹 요청 영역 wrapper -->
+        <div id="request-area">
+
+          <p style="color: #ff5277; font-weight:600; margin-top: 20px; text-align:center;">
+            {{ error | safe }}
+          </p>
+
+          <form
+            action="https://docs.google.com/forms/d/e/1FAIpQLSd3O4Yf7q9JMXlk0OwrCEAKkr9bLO9Lkixt31jX2fOX5S2HyA/formResponse"
+            method="POST"
+            target="hidden_iframe"
+            onsubmit="handleRequestSubmit()"
+          >
+            <label>
+              매장명 또는 테마명 입력
+              <input
+                type="text"
+                name="entry.2028533285"
+                placeholder="매장명 또는 테마명 입력"
+                required
+              />
+            </label>
+
+            <button class="submit-btn" type="submit">요청하기</button>
+          </form>
+
+          <iframe name="hidden_iframe" style="display:none;"></iframe>
+
+        </div>
+
+        <!-- 🔹 완료 메세지 -->
+        <p id="request-done"
+          style="display:none; margin-top:20px; text-align:center; color:#3d5af1; font-weight:600;">
+          ✔️요청이 완료되었어요<br>
+          빠른시일내에 업뎃할게요🤗
         </p>
-
-        
-    <!-- 요청 입력 -->
-    <form
-      class="request-form"
-      action="https://docs.google.com/forms/d/e/1FAIpQLSd3O4Yf7q9JMXlk0OwrCEAKkr9bLO9Lkixt31jX2fOX5S2HyA/formResponse"
-      method="POST"
-      target="hidden_iframe"
-    >
-      <input
-        type="text"
-        name="entry.2028533285"
-        placeholder="매장명 또는 테마명 입력"
-        autocomplete="off"
-        required
-      />
-      <button type="submit" class="submit-btn">요청하기</button>
-    </form>
-    <iframe name="hidden_iframe" style="display:none;"></iframe>
-
       {% endif %}
     {% else %}
 
@@ -277,5 +266,23 @@
     © 2025 <strong style="color:#e07795;">BOK_T2A</strong>. All rights reserved.<br />
     <span>Made with <span style="color:#f48fb1;font-weight:600;">PEACH BOT</span></span>
   </footer>
+
+  <script>
+    function handleRequestSubmit(){
+      // 바로 UI 전환
+      const area = document.getElementById("request-area");
+      const done = document.getElementById("request-done");
+
+      if (area) area.style.display = "none";
+      if (done) done.style.display = "block";
+
+      // input 값 정리 (안 보여도 깔끔하게)
+      const input = document.querySelector('input[name="entry.2028533285"]');
+      if (input) input.value = "";
+
+      return true; // 폼 전송 계속
+    }
+  </script>
+
 </body>
 </html>
