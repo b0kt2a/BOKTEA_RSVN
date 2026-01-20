@@ -138,6 +138,16 @@ def index():
         raw_query = selected_store
         q = normalize_query(raw_query)
 
+    # ✅ 초성만/특수문자만 입력 등으로 q가 비면 검색 막기 (LIKE '%%' 방지)
+    if raw_query and not q:
+        return render_template(
+            "index.html",
+            selected_date=selected_date,
+            selected_store=selected_store,
+            results=[],
+            theme_results=[],
+            error="초성검색은 지원하지않아요😭<br>찾는 테마가 없다면 아래 요청하기로 남겨주세요🤗"
+        )
 
         # ✔ 매장 검색은 keywords ONLY
         stores = db.execute(
