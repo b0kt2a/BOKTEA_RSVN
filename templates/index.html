@@ -176,38 +176,36 @@
     {% if not results %}
       {% if error %}
         <!-- 🔹 요청 영역 wrapper -->
-        <div id="request-area">
-
-          <p style="color: #ff5277; font-weight:600; margin-top: 20px; text-align:center;">
-            {{ error | safe }}
-          </p>
-
-          <form
-            action="https://docs.google.com/forms/d/e/1FAIpQLSd3O4Yf7q9JMXlk0OwrCEAKkr9bLO9Lkixt31jX2fOX5S2HyA/formResponse"
-            method="POST"
-            target="hidden_iframe"
-            onsubmit="handleRequestSubmit()"
-          >
-            <input
-              type="text"
-              name="entry.2028533285"
-              placeholder="매장명 또는 테마명 입력"
-              required
-            />
-            
-            <button class="submit-btn" type="submit">요청하기</button>
-          </form>
-
-          <iframe name="hidden_iframe" style="display:none;"></iframe>
-
-        </div>
-
-        <!-- 🔹 완료 메세지 -->
-        <p id="request-done"
-          style="display:none; margin-top:20px; text-align:center; color:#3b0352; font-weight:600;">
-          ✔️요청이 완료되었어요👍🏻<br>
-          빠른시일내에 업뎃할게요🤗
+      <div id="request-area">
+        <p style="color:#ff5277; font-weight:600; margin-top:20px; text-align:center;">
+          {{ error | safe }}
         </p>
+
+        <form
+          id="request-form"
+          action="https://docs.google.com/forms/d/e/1FAIpQLSd3O4Yf7q9JMXlk0OwrCEAKkr9bLO9Lkixt31jX2fOX5S2HyA/formResponse"
+          method="POST"
+          target="hidden_iframe"
+          onsubmit="return handleRequestSubmit();"
+          style="gap:6px;"
+        >
+          <input
+            type="text"
+            name="entry.2028533285"
+            placeholder="매장명 또는 테마명 입력"
+            required
+            autocomplete="off"
+          />
+          <button class="submit-btn" type="submit">요청하기</button>
+        </form>
+
+        <iframe name="hidden_iframe" style="display:none;"></iframe>
+      </div>
+
+      <p id="request-done"
+        style="display:none; margin-top:20px; text-align:center; color:#6b0ca1; font-weight:600;">
+        ✔️요청이 완료되었어요👍🏻<br>빠른시일내에 업뎃할게요🤗
+      </p>
       {% endif %}
     {% else %}
 
@@ -270,18 +268,18 @@
 
   <script>
     function handleRequestSubmit(){
-      // 바로 UI 전환
       const area = document.getElementById("request-area");
       const done = document.getElementById("request-done");
 
+      // 화면 전환
       if (area) area.style.display = "none";
       if (done) done.style.display = "block";
 
-      // input 값 정리 (안 보여도 깔끔하게)
+      // 값 비우기(안 보이지만 깔끔하게)
       const input = document.querySelector('input[name="entry.2028533285"]');
       if (input) input.value = "";
 
-      return true; // 폼 전송 계속
+      return true; // ✅ 이게 없으면 브라우저/상황에 따라 제출이 막힐 수 있어
     }
   </script>
 
