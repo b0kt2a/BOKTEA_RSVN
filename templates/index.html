@@ -173,6 +173,42 @@
         <p style="color: #ff5277; font-weight:600; margin-top: 20px; text-align:center;">
           {{ error | safe }}
         </p>
+
+        
+    <!-- 요청 입력 -->
+    <form
+      action="https://docs.google.com/forms/d/e/1FAIpQLSd3O4Yf7q9JMXlk0OwrCEAKkr9bLO9Lkixt31jX2fOX5S2HyA/formResponse"
+      method="POST"
+      target="hidden_iframe"
+      style="margin-top:12px; display:flex; justify-content:center; gap:8px;"
+    >
+      <input
+        type="text"
+        name="entry.2028533285"
+        placeholder="매장명/테마명을 입력해 주세요"
+        required
+        style="
+          width:260px;
+          padding:10px;
+          border-radius:10px;
+          border:1px solid #ccc;
+          font-size:14px;
+        "
+      />
+      <button
+        type="submit"
+        style="
+          padding:10px 14px;
+          border-radius:10px;
+          font-size:14px;
+          cursor:pointer;
+        "
+      >
+        요청하기
+      </button>
+    </form>
+
+    <iframe name="hidden_iframe" style="display:none;"></iframe>
       {% endif %}
     {% else %}
 
