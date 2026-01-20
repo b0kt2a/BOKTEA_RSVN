@@ -82,7 +82,11 @@
       border-color: #3d5af1;
     }
 
-        .submit-btn {
+    form[action*="formResponse"] {
+      gap: 6px;
+    }  
+
+      .submit-btn {
       width: 100%;
       padding: 12px 0;
       background: #3d5af1;
@@ -184,16 +188,13 @@
             target="hidden_iframe"
             onsubmit="handleRequestSubmit()"
           >
-            <label>
-              매장명 또는 테마명 입력
-              <input
-                type="text"
-                name="entry.2028533285"
-                placeholder="매장명 또는 테마명 입력"
-                required
-              />
-            </label>
-
+            <input
+              type="text"
+              name="entry.2028533285"
+              placeholder="매장명 또는 테마명 입력"
+              required
+            />
+            
             <button class="submit-btn" type="submit">요청하기</button>
           </form>
 
@@ -203,8 +204,8 @@
 
         <!-- 🔹 완료 메세지 -->
         <p id="request-done"
-          style="display:none; margin-top:20px; text-align:center; color:#3d5af1; font-weight:600;">
-          ✔️요청이 완료되었어요<br>
+          style="display:none; margin-top:20px; text-align:center; color:#3b0352; font-weight:600;">
+          ✔️요청이 완료되었어요👍🏻<br>
           빠른시일내에 업뎃할게요🤗
         </p>
       {% endif %}
