@@ -124,12 +124,13 @@ bo_hd,브레이크아웃 이스케이프 홍대점,,,"호커스1-마술사의방
 sg_hd,비밀의 숲 홍대점,,,"어비스,드림레일,OVERKILL,BESTSELLER,리플레이,오버킬,베스트셀러",1,,https://naver.me/xl0DAxwU
 sg_kd,비밀의 화원 건대점,,,"안녕,우리의전사랑,비밀의선물,레드림컴퍼니,우끼끼,핑크슈즈",1,,https://www.secretgardenescape.com/
 sg_gj,비밀의 화원 광주점,,,"무고,리비도,스토커,새벽베이커리,비밀의가족,라스트잡,LOVE BLOSSOM,러브블로썸",1,,https://www.secretgardenescape.com/
-sg_dhr,비밀의 화원 대학로점,,,"비밀의모험,슈퍼플레이어:PLAYER1,엑스튜브,대감댁변씨,나이스,혜화애",1,,https://www.secretgardenescape.com/
+sg_dhr,비밀의 화원 대학로점,,,"비밀의모험,슈퍼플레이어:PLAYER1,엑스튜브,대감댁변씨,나이스",1,,https://www.secretgardenescape.com/
 sg_dsr,비밀의 화원 동성로점,,,"리비도,대X9탈출,안녕,비밀의선물,대감댁변씨,영웅을찾아서,향수2019",1,,https://www.secretgardenescape.com/
-sg_hj,비밀의 화원 미드나잇 합정점,,,"비밀의가족,파리82,팩토리엠,기다려금방갈게",1,,https://www.secretgardenescape.com/
+sg_hj,비밀의 화원 미드나잇 합정점,6,0:00,"비밀의가족,파리82,팩토리엠,기다려금방갈게",,,https://www.secretgardenescape.com/
 sg_sm,비밀의 화원 서면점,,,"아뜰리에,비밀의화원,연애학개론,컬러즈,블라인드,베이비레이스,슈퍼엔지니어",1,,https://www.secretgardenescape.com/
-sg_hh,비밀의 화원 시네마틱 혜화점,,,"H.E.L.L.P,HELLP,헬프,달:기억의조각,딜레마,도망자여씨,삼남매이씨",1,,https://www.secretgardenescape.com/
+sg_hh,비밀의 화원 시네마틱 혜화점,6,0:00,"H.E.L.L.P,HELLP,헬프,달:기억의조각,딜레마,도망자여씨,삼남매이씨",,,https://www.secretgardenescape.com/
 sg_jj,비밀의 화원 전주점,,,"달:기억의조각,사춘기,담력학원",1,,https://www.secretgardenescape.com/
+sg_fkd,비밀의 화원 포레스트건대점,,,,,,
 bp_gd1,비트포비아 강남던전,6,16:00,"강남목욕탕,강목,대호시장살인사건,마음을그려드립니다,마그다,LOST KINGDOM,로스트킹덤,로킹",,,https://xdungeon.net/
 bp_gd2,비트포비아 강남던전2,6,17:00,"LOST KINGDOM2,로스트킹덤2,로킹2,MAY DAY,메이데이",,,https://xdungeon.net/
 bp_dhr,비트포비아 대학로점,6,0:00,"구룡잠들지않는도시,이런변이있나,이일호씨,잭더리퍼,지금만나러갑니다",,,https://www.xphobia.net/
@@ -160,7 +161,7 @@ sh_dj,셜록홈즈 대전은행점 (T.A),,,"리버스1부-결과,리버스2부-�
 sh_dhr,셜록홈즈 대학로점,,,"미녀와야수,드림인베이더,혼:원혼의저주,무속인살인사건,위험한레시피",1,,https://sherlock-holmes.co.kr/
 sh_dt,셜록홈즈 동탄점,,,"거짓말,귀신이산다,던전을부탁해,호텔:사라진다이아몬드,지옥의배달부,좀비여친",1,,https://sherlock-holmes.co.kr/
 sh_ms,셜록홈즈 미사점 (T.A),,,"요상한저택의비밀다락방,다이스,셜록곰즈,별별별아카데미-별의시험",1,,https://sherlock-holmes.co.kr/
-sh_art,셜록홈즈 부산 아트몰링,,,"95,골드워쳐,우당탕해결사무소,오버드라이브,시간의회랑",1,,https://sherlock-holmes.co.kr/
+sh_art,셜록홈즈 부산 아트몰링 (T.A),,,"95,골드워쳐,우당탕해결사무소,오버드라이브,시간의회랑",1,,https://sherlock-holmes.co.kr/
 sh_gj,셜록홈즈 부산기장정관점,,,"유품정리사,트라이앵글",1,,https://naver.me/5WOKedk7
 sh_bc,셜록홈즈 부천중동점 (T.A),,,"트레이드,SOON TO BE,DREAM THEATER,행운의배달부루시",1,,https://sherlock-holmes.co.kr/
 sh_bp2,셜록홈즈 부평2호점,,,"스탕달신드롬,RE:PEAT,데스게임:벼랑끝에선자들,YES!예스트코,프로젝트루나,꿈사탕",1,,https://sherlock-holmes.co.kr/
@@ -176,7 +177,7 @@ sh_as,셜록홈즈 아산점,,,"귀로여관,노룸,악마를보았다,대마법
 sh_bg,셜록홈즈 안양범계점 (T.A),14,0:00,"버튼을누르세요,PLAY OR DIE,1111,우리,나는야천재테러리스트,햄즈살찌우기,GUESS WHO KNOCK KNOCK,플레이OR다이,플레이다이,게스후낙낙,게스후녹녹",,,https://sherlock-holmes.co.kr/
 sh_ys,셜록홈즈 여수점,,,"전기톱살인사건,빛과그림자:화이트의죽음2,이상한나라의초대,할머니는마법사,크라임씬,무속인살인사건,파라오의심판",1,,https://sherlock-holmes.co.kr/
 sh_db,셜록홈즈 용인동백점 (T.A),,,"방탈출오락실,THE GOTH:마녀시험,돈에돈돈,다우트,헨젤,그레텔,디핵스,뮤직팩토리",1,,https://sherlock-holmes.co.kr/
-sh_wj,셜록홈즈 원주점,,,"RED&WHITE,홍연,시간관리국,경성,추적",1,,https://sherlock-holmes.co.kr/
+sh_wj,셜록홈즈 원주점 (T.A),,,"RED&WHITE,홍연,시간관리국,경성,추적",1,,https://sherlock-holmes.co.kr/
 sh_ujb,셜록홈즈 의정부점,,,"미녀와야수,WISH,강령술,SECURITY 야간경비근무,실종,위시",1,,https://sherlock-holmes.co.kr/
 sh_jssn,셜록홈즈 잠실새내점 (T.A),14,0:00,"아내유하린37세,끝…그리고,도망친곳에낙원은없다",,,https://sherlock-holmes.co.kr/
 sh_js,셜록홈즈 잠실점,,,"빛과그림자,무속인살인사건,위험한레시피,웨딩크루즈살인사건,산속의여인,학교괴담태훈이의죽음,미대교수의비밀",1,,https://sherlock-holmes.co.kr/
@@ -185,20 +186,21 @@ sh_ca1,셜록홈즈 천안1호점,,,"무속인살인사건,이산한나라의초
 sh_ca2,셜록홈즈 천안2호점,,,"미즈몰리아와수수께끼의책,TIED,인생은실전이다종만아,던전:비밀의문",1,,https://sherlock-holmes.co.kr/
 sh_cj,셜록홈즈 청주점,,,"반고흐의방,빛과그림자:화이트의죽음2,도둑들,무속인살인사건,크라임씬",1,,https://sherlock-holmes.co.kr/
 sh_pt,셜록홈즈 평택점,,,"지옥의배달부,도둑들,혼:원혼의저주,미녀와야수,반고흐의방",1,,https://sherlock-holmes.co.kr/
+sh_gs,셜록홈즈 군산수송점,,,"호환마마,쉘터,암영귀,yolo카페,욜로카페,teacher,티쳐",1,,https://sherlock-holmes.co.kr/
 swj_sw,소우주,6,0:00,"풀문,도고,마지막 유산,영포에버,방과후 추리반,여고생 살인사건,여고생 실종사건,SPIN-OFF,스핀오프",,,http://sowoojoo-escape.com/
 swj_ig,소우주 인계갤러리점,6,13:00,시간의 균열,,,https://naver.me/5YSvb8vM
 sr_hd,쇼룸 404,13,0:00,"PIG,꼬치진다,블랙홀,한라아파트 4동 404호,피그,유튜버매화선녀",,,https://showroom404.com/
 he_gj2,숨바꼭질 2호점,,,"무죄2,명당,재개발구역:관계자외출입금지,호렵:범의탈을쓴여우",1,매주 일요일 13:00 2주 뒤(8일 뒤) 월~일 예약 오픈,https://naver.me/F16XN84H
 he_gj3,숨바꼭질 3호점,,,종결사건,1,매주 수요일 14:50 다음주 월~일 예약 오픈,https://naver.me/5mIHh0h3
 he_gj3,숨바꼭질 3호점,,,비공개모드,1,매주 수요일 14:55 다음주 월~일 예약오픈,https://naver.me/5mIHh0h3
-he_gj,숨바꼭질 광주동구점,,,"꽃배,무죄,인연,손님",,,
+he_gj,숨바꼭질 광주동구점,8,0:00,"꽃배,무죄,인연,손님",,,https://hideescape.com/
 str_mk,스토리메이커스,,,"n,엔",1,,https://naver.me/FCrTZq6Q
 sp_es,스피키지,13,0:00,"급X,급똥,올림픽시즌2-1988",,,https://speakeasyescape.co.kr/
 gt_gj,시간의 문 광주점,10,0:00,"dkdk,쇼쿠진,chaser:한마음폐공장,혼숨,hereiam,직박구리:남친탐구생활,영안실,복도끝:못다한이야기,못다恨이야기",,,https://naver.me/xzxwgnk1
 gt_dsr,시간의 문 대구동성로점,10,0:00,"chaser:한마음폐공장,영안실,시크릿왕국의스캔들(완전판),혼숨:리마스터,복도끝:못다한이야기,못다恨이야기",,,https://naver.me/5jJTmSwX
-sh_grs,시그널헌터 가로수길점,,,"젠틀맨뱅크,신사정육점,원상복귀,엑소시즘인신사",1,,https://naver.me/Gn03JT5Z
-sh_sw,시그널헌터 광교중앙점,10,0:00,"G.GALLERY,G.갤러리,서대문형무소,추적자,그남자의방,쥬라기프로젝트,THE MUMMY,시작,더머미",,,https://naver.me/xOdZirOH
-sh_dt,시그널헌터 동탄점,,,"The mummy,더머미,증발,인생극장,엑스파일,x-file,닥터좀비,doctor zombie",1,,https://naver.me/x7jdGdAZ
+sgn_grs,시그널헌터 가로수길점,,,"젠틀맨뱅크,신사정육점,원상복귀,엑소시즘인신사",1,,https://naver.me/Gn03JT5Z
+sgn_sw,시그널헌터 광교중앙점,10,0:00,"G.GALLERY,G.갤러리,서대문형무소,추적자,그남자의방,쥬라기프로젝트,THE MUMMY,시작,더머미",,,https://naver.me/xOdZirOH
+sgn_dt,시그널헌터 동탄점,,,"The mummy,더머미,증발,인생극장,엑스파일,x-file,닥터좀비,doctor zombie",1,,https://naver.me/x7jdGdAZ
 sc_ppl,신촌퍼플릭,7,0:00,"인투더와일드,INTO THE WILD,그도…그럴 것이다,SCENE:404 NOT FOUND,씬",,,https://naver.me/xJGs1P63'
 se_gn,싸인이스케이프 강남시티점,6,0:00,"러너웨이,RUNAWAY,EXPRESS,익스프레스,MUST,머스트",,,http://www.signescape.com/
 se_sw,싸인이스케이프 성대역점,,,"각성,고시텔(3층),우울증,인턴,자멜신부의 비밀",1,,http://www.signescape.com/
@@ -265,7 +267,7 @@ pm_hs,파노라마 홍대삼거리점,6,0:00,"퍼펫플레이,puppetplay",,,http
 ft_str1,판타스트릭 1호점,6,0:00,"태초의신부,이브프로젝트,태이프",,,http://fantastrick.co.kr/
 ft_str2,판타스트릭 2호점,6,0:00,"북오브두아트,사자의서,BOOK OF DUAT",,,http://fantastrick.co.kr/
 ft_str3,판타스트릭 TGC,6,0:00,"LOCKDOWN CITY,락다운시티",,,http://fantastrick.co.kr/
-ft_sia,판타지아,,,"찬미특수진료센터,inspecto,getogeto,",1,매주 목요일 23:50 ~ 금요일 00:00 사이에<br>3주 뒤 수요일까지 열립니다.,https://naver.me/GI3hw5ys
+ft_sia,판타지아,,,"찬미특수진료센터,inspecto,getogeto,",1,매주 목요일 23:50 ~ 금요일 00:00 사이에 3주 뒤 수요일까지 열립니다.,https://naver.me/GI3hw5ys
 pn_gn,포인트나인 강남점,6,0:00,"시간이멈춘마을,열쇠공의이중생활,눈먼귀금속상인의후회,주인없는낡은서점,2134",,,https://point-nine.com/
 pn_kd,포인트나인 건대점,6,0:00,"JACK IN THE SHOW,잭인더쇼,잭쇼,RETURN,리턴,ALBA,알바",,,https://point-nine.com/
 pn_hd,포인트나인 홍대점,6,0:00,"SILENT,사일런트,LISTEN,리슨",,,https://point-nine.com/
@@ -292,4 +294,4 @@ gk_kd,황금열쇠 건대점,6,0:00,"FLASH,플래시,NOW HERE,나우히어",,,ht
 gk_tk,황금열쇠 대구동성로2호점,6,0:00,"BAD ROB BAD,배롭배,2WAYS,투웨이즈,LAST,라스트,PILGRIM,지옥,다시너에게,HEAVEN,헤븐,냥탐정셜록캣,필그림",,,http://xn--jj0b998aq3cptw.com/
 gk_dsr,황금열쇠 대구동성로점,6,0:00,"경산,가이아기적의땅,JAIL.O,자일로,타임스틸러,X됐다,좆됐다,ㅈ됐다",,,http://xn--jj0b998aq3cptw.com/
 hs_hd,히든스위치 홍대점,,,"히든스위치,AUDREY,오드리,MISSING,미씽",1,,https://naver.me/GQ1lYd0z
-mre_gn,미스터리 룸 이스케이프 강남점,,,,,,http://www.mysteryroomescape-gn.com/
+mre_gn,미스터리 룸 이스케이프 강남점,,,"인형괴담,강인괴,개인병원의비밀,영혼의편지,소서러,사라진왕관",1,,http://www.mysteryroomescape-gn.com/
