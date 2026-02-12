@@ -130,7 +130,7 @@ sg_hj,비밀의 화원 미드나잇 합정점,6,0:00,"비밀의가족,파리82,�
 sg_sm,비밀의 화원 서면점,,,"아뜰리에,비밀의화원,연애학개론,컬러즈,블라인드,베이비레이스,슈퍼엔지니어",1,,https://www.secretgardenescape.com/
 sg_hh,비밀의 화원 시네마틱 혜화점,6,0:00,"H.E.L.L.P,HELLP,헬프,달:기억의조각,딜레마,도망자여씨,삼남매이씨",,,https://www.secretgardenescape.com/
 sg_jj,비밀의 화원 전주점,,,"달:기억의조각,사춘기,담력학원",1,,https://www.secretgardenescape.com/
-sg_fkd,비밀의 화원 포레스트건대점,,,,,,
+sg_fkd,비밀의 화원 포레스트건대점,,,"미씽스노우맨,더데이,새벽베이커리,라스트잡",1,,https://www.secretgardenescape.com/
 bp_gd1,비트포비아 강남던전,6,16:00,"강남목욕탕,강목,대호시장살인사건,마음을그려드립니다,마그다,LOST KINGDOM,로스트킹덤,로킹",,,https://xdungeon.net/
 bp_gd2,비트포비아 강남던전2,6,17:00,"LOST KINGDOM2,로스트킹덤2,로킹2,MAY DAY,메이데이",,,https://xdungeon.net/
 bp_dhr,비트포비아 대학로점,6,0:00,"구룡잠들지않는도시,이런변이있나,이일호씨,잭더리퍼,지금만나러갑니다",,,https://www.xphobia.net/
@@ -295,3 +295,35 @@ gk_tk,황금열쇠 대구동성로2호점,6,0:00,"BAD ROB BAD,배롭배,2WAYS,�
 gk_dsr,황금열쇠 대구동성로점,6,0:00,"경산,가이아기적의땅,JAIL.O,자일로,타임스틸러,X됐다,좆됐다,ㅈ됐다",,,http://xn--jj0b998aq3cptw.com/
 hs_hd,히든스위치 홍대점,,,"히든스위치,AUDREY,오드리,MISSING,미씽",1,,https://naver.me/GQ1lYd0z
 mre_gn,미스터리 룸 이스케이프 강남점,,,"인형괴담,강인괴,개인병원의비밀,영혼의편지,소서러,사라진왕관",1,,http://www.mysteryroomescape-gn.com/
+cc_hd,시크릿코드 홍대점,,,"백마교의최후,제페토,독립군,조난자들,미션이지,미션하드",1,,http://www.s-code.co.kr/
+pa_hd,플레이아레나 홍대점,,,풀리지 않는 49칸의 수수께끼,1,,https://naver.me/GVELNSpA
+esc_hus,방탈출 이스케이프 하우스,,,"살인호텔,임파서블,미드나이트,사라진목소리,3인의저주",1,,http://www.escapehouse.co.kr/
+d_coder,Decoder,,,"Tempo Rubato,템포루바토,템루,furious revenge,남자방,퓨리어스리벤지,퓨리오스리벤지,여자방,introverted thief",1,,http://decoder.kr/
+last_esc,라스트 이스케이프,,,"ALCATRAZ,알카트라즈,SECRETARY,비서,오감,CLUB LE7ELS,클럽레벨스,CLUBLEVELS,五感",1,,http://lastescape.co.kr/
+epsd_gn,에피소드 방탈출 강남점,,,"귀문기담,메아리,그래서님몇방?,그님몇",1,,https://naver.me/GJTSSEZr
+ccr_1089,쿠쿠룸 1089,6,0:00,"신비로운 직원생활, 실직요정 비상대책위원회,백순대,쿠쿠마스터",,,https://naver.me/FZ2CmMn8
+epsd_sh,에피소드 방탈출 분당점,,,"소녀괴담,파파라치,이레이저,럭키가이,데이드림",,,https://naver.me/G65wsmnX
+,솔버 1호점,,,,,,
+,솔버 2호점,,,,,,
+,방탈출 ESC,,,,,,
+,이스케이프시티 그랜드시티 신촌점,,,,,,
+,탐정크루 신촌2호점,,,,,,
+,시크릿 챔버,,,,,,
+,에필로그,,,,,,
+,상상락원,,,,,,
+,파노라마X롯데월드,,,파란,,,
+,더메이즈 노원점,,,,,,
+,더트랩 수유점,,,,,,
+,더파인더 방탈출,,,,,,
+,알카트래즈,,,,,,
+,월투월방탈출 서울대입구점,,,,,,
+,이스케이프시티 성신여대점,,,,,,
+,이스케이프시티 영등포점,,,,,,
+,탈출 브라더스,,,,,,
+,패닉이스케이프 목동점,,,,,,
+,호텔 레토 성수,,,,,,
+cb_hd,큐브이스케이프 홍대점,,,"피라미드의 비밀,헨젤과그레텔,towering,타워링,gestapo,게슈타포,게스타포,monkeyhouse,몽키하우스,장기밀매,deliver,딜리버,romeo point,로미오포인트",1,,http://cubeescape.co.kr/
+cb_ic,큐브이스케이프 인천구월점,,,"타이타닉,신데렐라,장기밀매,towering,타워링,집착",1,,http://incheon.cubeescape.co.kr/
+cb_jj,큐브이스케이프 전주점,,,"deliver,딜리버,좀비스쿨,피고인,헨젤과그레텔,제시의시크릿,피라미드의비밀,신데렐라,집착",1,,http://junju.cubeescape.co.kr/
+cb_dj,큐브이스케이프 대전둔산점,,,"장기밀매,신데렐라,집착,마션,타이타닉,카타콤,통곡의문",1,,http://daejeon.cubeescape.co.kr/
+cb_sy,큐브이스케이프 수유점,,,"우든펍의비밀,빅토리아호의침몰,거미의둥지,골든아이,the cube,더큐브,사라진천사들,stepfather,마녀의꿈,piggies,집착,트레저헌터,트레져헌터,obsession,treasure hunters",1,,http://suyu.cubeescape.co.kr/
