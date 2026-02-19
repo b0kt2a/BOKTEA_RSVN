@@ -9,6 +9,12 @@ DATABASE = "database.db"
 
 POSTER_DIR = os.path.join(app.root_path, "static", "posters")
 
+TIME_RE = re.compile(r'(\d{1,2}:\d{2})')
+
+def insert_newline_after_time(text):
+    if not text:
+        return text
+    return TIME_RE.sub(r'\1\n', text, count=1)
 
 def normalize_query(s: str) -> str:
     if not s:
@@ -178,17 +184,22 @@ def index():
             error="해당 매장/테마를 찾을 수 없어요ㅠ<br>복티에게 요청주시면 빠른시일내에 업뎃할게요🤗",
         )
 
-    # 🔥 매장 있을 때 → 예약일 계산
+  # 🔥 매장 있을 때 → 예약일 계산
     for store in stores:
-        # --- 마감일 계산 ---
+
         if store["always_open"] and int(store["always_open"]) == 1:
             deadline = store["fixed_note"] or "상시 예약 가능"
+
         elif store["deadline_days"] is not None and store["deadline_time"]:
             d = datetime.strptime(selected_date, "%Y-%m-%d")
             deadline_date = d - timedelta(days=int(store["deadline_days"]))
             deadline = deadline_date.strftime("%Y년 %m월 %d일 ") + store["deadline_time"]
+
         else:
             deadline = store["fixed_note"] or "상시 예약 가능"
+
+        # ✅ 줄바꿈 적용 (if/elif/else 밖, for 안)
+        deadline = insert_newline_after_time(deadline)
 
         # ✔ store_name 부분 일치로 테마 찾기
         theme_matches = db.execute(
@@ -213,7 +224,7 @@ def index():
                 "deadline": deadline,
                 "theme_id": first["id"] if first else None,
                 "theme_name": first["theme_name"] if first else None,
-                "themes": theme_matches,  # ✅ 여러개
+                "themes": theme_matches,
                 "memo": store["memo"],
             }
         )
