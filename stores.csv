@@ -53,7 +53,7 @@ dm_gw2,둠이스케이프 2호점,15,23:00,"운명,디스토피아,죄,인바이
 dm_dth,둠이스케이프 DTH점,7,23:30,"슬래셔,트리거,언리얼,스네어",,,https://doomescape.com/
 dre_kd,드림이스케이프 건대점,6,0:00,"바야흐로여름이었다,바여름,V.E.T,VET,ALLTHEBOX PARADISE,올더박스파라다이스,DOLPHIN,돌핀",,,https://naver.me/FBe2kT4H
 dp_tk,딥띵커,13,0:00,옹이의꿈,,,https://deepthinker.co.kr/
-live_c,라이브시네마,,,"우정,학교,라이브시네마",1,매월 1일 00:00 오픈,https://naver.me/5D8tUCV4
+live_c,라이브시네마,,,"우정,학교,라이브시네마",1,매월 1일 00:00,https://naver.me/5D8tUCV4
 rs_hr,러시아워,,,"전생연분,녀,하루끝,미끼,빔프로젝트",1,,
 rh_rm,러시아워 2호점 로드맨션,,,"지난날,오드의마법사,우당탕탕치즈탈환대작전!,듀얼",1,,https://naver.me/5HksuiTR
 rh_ct,러시아워 3호점 시네마틱,,,"악녀,은화기숙학원,빨간집",1,화->수 0:00 다음주 토~다다음주 금 1주일치 오픈,https://naver.me/5TQMYzbQ
@@ -114,7 +114,7 @@ mp_hd1,머더파커 홍대1호점,,,"구둣방손님,밴드의탄생,밴탄,주�
 mt_sw,메타이스케이프,6,0:00,"무저갱:사라진 사람들,에버드림,투제트,아케이드맨",,,https://xn--h32b25mu4dba377gzscs2k.com/
 mrj_kn,명란젓코난,,,"내월급을찾아라,마녀의레시피,수상한상점,공조,꿈속의방",1,,https://naver.me/55rSCU6z
 mre_hd2,미스터리 룸 이스케이프 홍대2호점,,,"쇼생크탈출,THE BOOK-소설책속의남자,스파이게임1945,쏘우-0KG,더북",1,,https://naver.me/GRo4wuZj
-my_dam,미스터리담,,,백석담,1,배우 스케쥴에 따라 랜덤하게 열립니다.,https://naver.me/GHYC5cqn
+my_dam,미스터리 담,,,백석담,1,배우 스케쥴에 따라 랜덤하게 열립니다.,https://naver.me/GHYC5cqn
 csh_gn,방탈출 초상화,7,0:00,"LES PORTRAIT,HIRAETH,히라이스,레포르트레",,,https://www.portraiteller.com/
 es_rbh,방탈출 토끼굴,7,23:00,"두껍아두껍아헌집줄게새집다오,두꺼비",,,https://www.rabbitholeescape.co.kr/
 d_doo,"방탈출, 둡두",,,"THE LAST EPISODE:마지막화,카르마,KARMA,행복을드림니다,둡두의정석,아이디어,idea",1,,https://naver.me/5LHs4CxM
@@ -211,8 +211,8 @@ xcp_kd,엑스케이프 건대점,15,0:00,"짜불성설,이도공간,501동사람
 xcp_sw,엑스케이프 수원점,15,0:00,"인지상점,기묘한날개짓,제물의밤,501동사람들,숨바꼭질",,,https://xcape.kr/sw
 xcp_hd,엑스케이프 홍대점,20,0:00,"고요의기지,더다이스룸,녹,그남자그여자,육식주의자,버지니아란제리샵",,,http://xcapehd.co.kr/
 xcr_kd,엑스크라임 건대점,15,0:00,"청림맨션,베다바리,운필귀정",,,https://xcape.kr/xr
-etp_d,엔터팟 1호점,,,비공식수사,1,매월 1일 18:00 오픈,https://naver.me/GQ1MvYQo
-etp_ui,엔터팟 2호점,,,"미스터리 동네탐정,미동탐",1,매월 1일 20:00 오픈,https://naver.me/GQ1MvYQo
+etp_d,엔터팟 1호점,,,비공식수사,1,매월 1일 18:00,https://naver.me/GQ1MvYQo
+etp_ui,엔터팟 2호점,,,"미스터리 동네탐정,미동탐",1,매월 1일 20:00,https://naver.me/GQ1MvYQo
 ohp_gn,오늘의 한 페이지,7,22:00,"오한페,버디,BUDDY,용하다용해!! 용팔도령",,,https://naver.me/xDJhQDFm
 osm_hd,오아시스 뮤지엄,6,0:00,"업사이드 다운,업사다,미씽 삭스 미스터리,미삭미,미싹미,배드타임,밷타,하이맥스,4SUM1",,,https://oasismuseum.com
 wy_hd,위욜,6,0:00,"위욜,디어마이프렌드,디마프,즐거운나의집,즐나집,히든오퍼",,,https://weyol.com/'
@@ -241,7 +241,7 @@ cde_grs,코드이스케이프 가로수길점,13,0:00,"아는사이,수산업스
 cde_ms,코드이스케이프 마산점,,,"재즈인더레인,JAZZ IN THE RAIN,상속자,싱어게인,SING AGAIN,프리즌브레이크2",1,,http://www.code-escape-ms.com/
 ck_gn,코드케이 강남점,,,"도둑들,504호,얼어붙은물의신전,살인사건현장,기억상실,미치광이연쇄살인범,셜록홈즈:살인누명,충무공이순신,감옥탈출,저주받은산장,좀비90일후,납치,테러리스트,기술자들,미스터리거울의방,미거방",1,,http://code-k.co.kr/
 ck_hd,코드케이 홍대점,,,꼬레아우라,1,,http://code-k.co.kr/
-cd_ht,코드헌터 강남점,,,"끼리코구조대,티모의모험,왕자와공주",1,매월 1일 0:00 해당월 오픈,https://naver.me/5h1pRciU
+cd_ht,코드헌터 강남점,13,0:00,"끼리코구조대,티모의모험,왕자와공주",,,https://naver.me/5h1pRciU
 qc_mk,퀘스천마크,7,22:00,"퀘스천마크,퀘마",,,https://question-mark.co.kr/
 cb_js,큐브이스케이프 잠실점,,,"romeo point,신데렐라,집착,마션,타이타닉,카타콤",1,,http://jamsil.cubeescape.co.kr/
 cb_ch,큐브이스케이프 천호점,,,"the cube,the maze,장기밀매 part2,stepfather,사라진천사들,piggies,마녀의꿈,aphilia,장미의비밀,피고인",1,,http://cheonho.cubeescape.co.kr/
@@ -267,7 +267,7 @@ pm_hs,파노라마 홍대삼거리점,6,0:00,"퍼펫플레이,puppetplay",,,http
 ft_str1,판타스트릭 1호점,6,0:00,"태초의신부,이브프로젝트,태이프",,,http://fantastrick.co.kr/
 ft_str2,판타스트릭 2호점,6,0:00,"북오브두아트,사자의서,BOOK OF DUAT",,,http://fantastrick.co.kr/
 ft_str3,판타스트릭 TGC,6,0:00,"LOCKDOWN CITY,락다운시티",,,http://fantastrick.co.kr/
-ft_sia,판타지아,,,"찬미특수진료센터,inspecto,getogeto,",1,매주 목요일 23:50 ~ 금요일 00:00 사이에 3주 뒤 수요일까지 열립니다.,https://naver.me/GI3hw5ys
+ft_sia,판타지아,,,"찬미특수진료센터,inspecto,getogeto,인스펙토,겟오겟오",1,매주 금요일 00:00 3주 뒤 수요일까지 열립니다.,https://naver.me/GI3hw5ys
 pn_gn,포인트나인 강남점,6,0:00,"시간이멈춘마을,열쇠공의이중생활,눈먼귀금속상인의후회,주인없는낡은서점,2134",,,https://point-nine.com/
 pn_kd,포인트나인 건대점,6,0:00,"JACK IN THE SHOW,잭인더쇼,잭쇼,RETURN,리턴,ALBA,알바",,,https://point-nine.com/
 pn_hd,포인트나인 홍대점,6,0:00,"SILENT,사일런트,LISTEN,리슨",,,https://point-nine.com/
@@ -327,4 +327,4 @@ cb_ic,큐브이스케이프 인천구월점,,,"타이타닉,신데렐라,장기�
 cb_jj,큐브이스케이프 전주점,,,"deliver,딜리버,좀비스쿨,피고인,헨젤과그레텔,제시의시크릿,피라미드의비밀,신데렐라,집착",1,,http://junju.cubeescape.co.kr/
 cb_dj,큐브이스케이프 대전둔산점,,,"장기밀매,신데렐라,집착,마션,타이타닉,카타콤,통곡의문",1,,http://daejeon.cubeescape.co.kr/
 cb_sy,큐브이스케이프 수유점,,,"우든펍의비밀,빅토리아호의침몰,거미의둥지,골든아이,the cube,더큐브,사라진천사들,stepfather,마녀의꿈,piggies,집착,트레저헌터,트레져헌터,obsession,treasure hunters",1,,http://suyu.cubeescape.co.kr/
-bk_hv,BLACK H[-]AVEN,,,4F : 마지막 기록,1,매주 화요일 오전 11:00 다음주 월~일 회차 오픈,https://naver.me/x2YJOVXU
+bk_hv,BLACK H[-]AVEN,,,"4F : 마지막 기록,4층",1,매주 화요일 오전 11:00 다음주 월~일 회차 오픈,https://naver.me/x2YJOVXU

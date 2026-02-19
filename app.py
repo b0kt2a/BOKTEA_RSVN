@@ -14,7 +14,19 @@ TIME_RE = re.compile(r'(\d{1,2}:\d{2})')
 def insert_newline_after_time(text):
     if not text:
         return text
-    return TIME_RE.sub(r'\1\n', text, count=1)
+
+    s = str(text)
+
+    m = TIME_RE.search(s)
+    if not m:
+        return s
+
+    # 시간 뒤에 내용이 더 있으면 줄바꿈, 아니면 그대로
+    after = s[m.end():]
+    if after.strip() == "":
+        return s  # 시간으로 끝나면 줄바꿈 X
+
+    return s[:m.end()] + "\n" + s[m.end():]
 
 def normalize_query(s: str) -> str:
     if not s:
