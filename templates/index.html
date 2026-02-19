@@ -245,16 +245,8 @@
           </div>
 
           <!-- 마감일 -->
-          <div class="deadline-result">
-            {{ result.deadline }}
+          <div class="deadline-result">{{ result.deadline }}{% if result.deadline == "상시 예약 가능" %}<br /><span class="deadline-sub">예약가능일 30일초과 매장은 상시예약가능으로 분류됩니다.</span>{% endif %}</div>
 
-            {% if result.deadline == "상시 예약 가능" %}
-              <br />
-              <span class="deadline-sub">
-                예약가능일 30일초과 매장은 상시예약가능으로 분류됩니다.
-              </span>
-            {% endif %}
-          </div>
 
           <!-- 시간표 링크 -->
           {% if result.themes and result.themes|length > 0 %}
@@ -269,7 +261,6 @@
             </div>
 
           {% elif result.theme_id %}
-            <br />
             <div style="margin-top: 5px; margin-bottom: 14px;">
               🔍
               <a href="{{ url_for('theme_detail', theme_id=result.theme_id) }}">
