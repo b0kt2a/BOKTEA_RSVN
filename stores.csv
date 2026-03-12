@@ -1,7 +1,7 @@
 ﻿store_id,name,deadline_days,deadline_time,keywords,always_open,fixed_note,memo
-33_kd,PLAY33 건대점,7,20:00,다이얼,,,https://play33.kr/
-33_dj,PLAY33 대전점,7,20:00,"강천여자고등학교,강천여고",,,https://play33.kr/
-33_hd,PLAY33 홍대점,7,20:00,,,,https://play33.kr/
+33_kd,PLAY33 건대점,7,20:00,"다이얼,그날,목격자",,,https://play33.kr/
+33_dj,PLAY33 대전점,7,10:00,"강천여자고등학교,강천여고,자각몽",,,https://play33.kr/
+33_hd,PLAY33 홍대점,7,,,,,https://play33.kr/
 st_esc,STUDIO ESC,6,0:00,"검마,검은마법사,하마,흰마,하얀마법사",,,https://studioesc.co.kr/
 dh_gn,개꿀이스케이프,7,0:00,"T_T,티티,말장난감2,게임이몇개임,겜몇개,개꿀스피치센터,태훈이의방,3인적정테마",,,https://naver.me/FtThdKdO
 gaw_gn,겟어웨이 방탈출,,,"악마와싸우는자,악싸자,기억을잃은자들,사라진성물,클라바리오봉쇄수도원,기잃자",1,,https://naver.me/F0z6ANR6
@@ -121,7 +121,7 @@ d_doo,"방탈출, 둡두",,,"THE LAST EPISODE:마지막화,카르마,KARMA,행�
 mi_ro,방탈출미로,,,"PINO,피노,무속인살인사건,호텔:사라진다이아몬드,프로젝트:노아,연:그날의기억",1,,https://naver.me/5S9QxwaA
 bs_td,버스티드,14,0:00,"그림도 찾아주나요?,THE END,디엔드,경성,탐정B:브레인헌터의 진실,탐정비,러브러브 퀴즈 동아리,러퀴동",,,https://busted.kr/
 bo_hd,브레이크아웃 이스케이프 홍대점,,,"호커스1-마술사의방,호커스2-비밀의방,수상한한의원,최후의낙원,서리브럼",1,,https://naver.me/513Nmxz7
-sg_hd,비밀의 숲 홍대점,,,"어비스,드림레일,OVERKILL,BESTSELLER,리플레이,오버킬,베스트셀러",1,,https://naver.me/xl0DAxwU
+sfr_hd,비밀의 숲 홍대점,,,"어비스,드림레일,OVERKILL,BESTSELLER,리플레이,오버킬,베스트셀러",1,,https://naver.me/xl0DAxwU
 sg_kd,비밀의 화원 건대점,,,"안녕,우리의전사랑,비밀의선물,레드림컴퍼니,우끼끼,핑크슈즈",1,,https://www.secretgardenescape.com/
 sg_gj,비밀의 화원 광주점,,,"무고,리비도,스토커,새벽베이커리,비밀의가족,라스트잡,LOVE BLOSSOM,러브블로썸",1,,https://www.secretgardenescape.com/
 sg_dhr,비밀의 화원 대학로점,,,"비밀의모험,슈퍼플레이어:PLAYER1,엑스튜브,대감댁변씨,나이스",1,,https://www.secretgardenescape.com/
@@ -224,7 +224,7 @@ ecp_hd2,이스케이퍼스 홍대2호점,,,"네모네모마믈메는무슨밀미
 ecs_kd,이스케이프# 건대점,6,0:00,"고양학개론,캠프ING,옥순양갱,철수네 슈퍼,철수네수퍼,오메가,더 라스트 노트,MR.BANG,미스터뱅,미스터방,치로의여름방학,영원교실",,,https://naver.me/57VZ2oRv
 ecs_ss,이스케이프# 신사점,29,0:00,"주희 다방,손 없는 날,판데믹,천사소녀 제티,포춘 테라피",,,https://naver.me/5yPJqzhk
 ecw_sw,이스케이프월드,7,23:00,"이스케이프컴퍼니,이케컴,escape company",,,https://naver.me/5FEJkSkH
-zw_gn,제로월드 강남점,14,0:00,"강제월,링,콜러,포레스트,나비효과,콜,포,어느겨울밤2,어겨밤2,아이엠,DONE,돈,헐,제로호텔L",,,<a href=https://zerogangnam.com/
+zw_gn,제로월드 강남점,14,0:00,"강제월,링,콜러,포레스트,나비효과,콜,포,어느겨울밤2,어겨밤2,아이엠,DONE,돈,헐,제로호텔L",,,https://zerogangnam.com/
 zw_gp,제로월드 김포본점,14,0:00,"김제월,제로호텔,탈옥,특별수용소,어느겨울밤,어겨밤,인형괴담,김인괴,성역전설,최면,복희네사진관 SE,피노키오대탈출,검은사원,해리포터의모험SE,FEAR,피어",,,https://zeroesc.com
 zw_sh,제로월드 서현점,,,"검은집,기억상실,사계,폐쇄병동,피노키오대탈출,해리포터의모험,마법모자의위기,홈어웨이",1,,http://zeroworldesc.co.kr/
 zw_hd,제로월드 홍대점,14,0:00,"홍제월,얼라이브,ALIVE,사랑..하는..감?,깜방탈출,WAY OUT,NOX,녹스,층간소음,층소,사랑하는감?,사랑감",,,https://zerohongdae.com/
@@ -316,7 +316,7 @@ find_esc,더파인더 방탈출,,,"무인도,201호202호,괴담수집가,4,더�
 wtw_esc,월투월방탈출 서울대입구점,,,"마법사의세계,지하감옥,드림인베이더,위험한레시피,이상한나라의초대",1,,https://naver.me/xTT2vxAy
 esc_bro,탈출 브라더스,,,"지하감옥,파라오의비밀,도둑들,원혼의저주,달의제단,미드나잇콜링",1,,https://escapebro.co.kr/
 pnc_md,패닉이스케이프 목동점,,,"매직아카데미,ARROW,두얼굴의영주,애로우",1,,http://www.panicescape.com/
-lt_ss,레토 성수,6,0:00,호텔 레토,,,
+lt_ss,레토 성수,6,0:00,호텔 레토,,,https://hotelletoh.co.kr/
 cb_hd,큐브이스케이프 홍대점,,,"피라미드의 비밀,헨젤과그레텔,towering,타워링,gestapo,게슈타포,게스타포,monkeyhouse,몽키하우스,장기밀매,deliver,딜리버,romeo point,로미오포인트",1,,http://cubeescape.co.kr/
 cb_ic,큐브이스케이프 인천구월점,,,"타이타닉,신데렐라,장기밀매,towering,타워링,집착",1,,http://incheon.cubeescape.co.kr/
 cb_jj,큐브이스케이프 전주점,,,"deliver,딜리버,좀비스쿨,피고인,헨젤과그레텔,제시의시크릿,피라미드의비밀,신데렐라,집착",1,,http://junju.cubeescape.co.kr/
@@ -328,3 +328,4 @@ ect_sswu,이스케이프시티 성신여대점,,,"알고보면,그녀를찾아�
 ect_bc,이스케이프시티 부천신중동점,,,"부자가될상인가,바람바람바람,추억의전당포,원한",1,,http://www.escapecity.kr/
 ect_sc,이스케이프시티 그랜드 시티 신촌점,14,0:00,"연,신의실수,컨티뉴얼",,,http://www.escapecity.kr/
 pm_bs,파노라마 부산점,12,0:00,미래재난리포트,,,https://naver.me/FutFZ0bm
+sh_nbc,셜록홈즈 뉴부천점,,,"madeon,xiamen,houndred,crack,월간오컬트:폐간호,귀가,마데온,샤먼,하운드레드,크랙",1,,https://sherlock-holmes.co.kr/
