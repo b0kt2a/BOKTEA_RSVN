@@ -31,7 +31,6 @@ dps_gn,단편선 강남,6,0:00,"그림자없는상자,그없상,사람들은그�
 dps_ss,단편선 성수,6,0:00,"쓰여진문장속에구원이없다면,쓰문구,존재할자격,쥐와파시스트와마지막한장,쥐파마,뱃사람의별,뱃별",,,https://dpsnnn-s.imweb.me/
 tcd_gj,더 코드 경주점,,,"몽타주:강력1반#2,최부장의비밀,박물관:도둑들#3,도박꾼:마지막베팅",1,,http://thecode02.kr/
 tcd_jgj,더 코드 광주,20,0:00,"타짜,곤지암,경찰서를털어라,미생,탈옥,탐정,나홀로집에,도둑들",,,http://www.thecode-escape.com/
-tcd_sl,더 코드 신림점,,,"아파트,위자보드:위험한장난,다시시작된살인사건,세기의명화를훔치는도둑들,의문의동창회",1,,http://thecode09.kr/
 tcd_wsn,더 코드 왕십리점,,,"도둑들#2:다이어몬드블루문,피의일요일,냉동창고:살인사건#2,도박꾼:마지막베팅",1,,http://www.thecode12.kr/
 tcd_sgp,더 코드 제주서귀포점,,,"재즈바W:위험한거래,위자보드:위험한장난,세기의명화를훔치는도둑들,다시시작된살인사건,강력1반:사라진아이들",1,,http://thecode06.kr/
 tcd_jj,더 코드 진주점,,,"다시시작된살인사건,의문의동창회,아파트,세기의명화를훔치는도둑들,위자보드:위험한장난,재즈바W:위험한거래,강력1반:사라진아이들",1,,http://thecode07.kr/
@@ -59,7 +58,7 @@ dm_dth,둠이스케이프 DTH점,7,23:30,"슬래셔,트리거,언리얼,스네�
 dre_kd,드림이스케이프 건대점,6,0:00,"V.E.T,브이이티,돌핀,DOLPHIN,올더박스파라다이스,올박,ALL THE BOX PARADISE,바야흐로여름이었다,바여름",,,https://naver.me/FBe2kT4H
 dp_tk,딥띵커,13,0:00,옹이의꿈,,,https://deepthinker.co.kr/
 last_esc,라스트 이스케이프,,,"알카트라즈,ALCATRAZ,비서,SECRETARY,오감,클럽레벨스,CLUB LEVELS,CLUB LE7ELS",1,,http://lastescape.co.kr/
-live_c,라이브시네마,,,"우정,학교:그날의이야기",1,매월 1일 00:00 1일~말일 예약 오픈,https://naver.me/5D8tUCV4
+live_c,라이브시네마,,,"우정,학교:그날의이야기",1,매월 1일 00:00 다음 달 1일~말일 예약 오픈,https://naver.me/5D8tUCV4
 rs_hr,러시아워,,,"전생연분,녀,하루끝,미끼,빔프로젝트",1,,
 rh_rm,러시아워 2호점 로드맨션,,,"지난날,오드의마법사,우당탕탕 치즈탈환 대작전!,듀얼",1,,https://naver.me/5HksuiTR
 rh_ct,러시아워 3호점 시네마틱,,,"악녀-은화기숙학원,빨간집",1,매주 수요일 15:00 다음주 토~다다음주 금 예약 오픈,https://naver.me/5TQMYzbQ
@@ -254,7 +253,8 @@ ee_lc,지구별방탈출 라스트시티점,7,22:00,"스텔라,카푸트,ALONE,�
 ee_av,지구별방탈출 어드벤처점,7,22:00,"피노키오,PINOCCHIO,잔향,아몬,새벽을여는소년,퀘스트,여정의시작,지난날을잊었다,미스터리",,,https://www.xn--2e0b040a4xj.com/
 cl_esc,찰리이스케이프,6,0:00,"퀴즈카페,퀴카,QUIZCAFE",,,https://naver.me/5k7iyEmQ
 cl_esc2,찰리이스케이프 2호점,7,22:00,"퀴즈카페2,퀴카2,QUIZCAFE2",,,https://naver.me/FbVPDyTq
-ch27_bf,채널 27 버터플라이점,7,21:00,"사요나라세이크,붐붐박사의불꽃놀이유토피아",,,https://naver.me/5dAKHysP
+ch27_bf,채널 27 버터플라이점,6,0:00,사요나라세이코,,,https://naver.me/5dAKHysP
+ch27_bf,채널 27 버터플라이점,3,0:00,붐붐박사의불꽃놀이유토피아,,,https://naver.me/5dAKHysP
 cs_he,체셔하우스,6,0:00,창귀,,,https://naver.me/5owEKRF1
 cde_grs,코드이스케이프 가로수길점,13,0:00,"아는사이,재즈인더레인,JAZZ IN THE RAIN,수산업스파이",,,http://www.code-escape-garosu.com/
 cde_ms,코드이스케이프 마산점,,,"재즈인더레인,JAZZ IN THE RAIN,싱어게인,SING AGAIN,상속자,프리즌브레이크2,PRISON BREAK2",1,,http://www.code-escape-ms.com/
