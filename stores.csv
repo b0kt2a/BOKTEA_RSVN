@@ -17,6 +17,7 @@ dp_as1,꿈소풍 안산1호점,9,0:00,"꿈꾸는앨리스,꿈앨,프리즌시즌
 dp_as2,꿈소풍 안산2호점,9,0:00,"B612,시민상가철거반,시상철,키멘주에이,비612,비육일이,냥냥펀치,금고,금GO",,,http://dreampicnicescape.com/
 nbj_ay1,나비잠 1호점,6,0:00,"트러블,몽,범계:산군토벌기,버거워,버거war,whatatrip,왓어트립,비영공업주식회사",,,https://naver.me/5Qsqsi2o
 nbj_ay2,나비잠 2호점,6,0:00,"하피스캔디샵,블라인드 저스티스,로스트&파운드,로스트앤파운드",,,https://naver.me/GHLnaipV
+nbj_ay3,나비잠 3호점,6,0:00,"버거워,버거war,whatatrip,왓어트립,비영공업주식회사",,,https://naver.me/5Qsqsi2o
 ui_sin,나의신방,13,0:00,"신촌성심병원,CHASER:한마음폐공장,한나는해고됐어",,,https://xn--910bj3tlmfz4e.com/
 ne_bnr,넥스트에디션 건대 보네르관,7,0:00,"세렌디피티,SERENDIPITY",,,https://naver.me/FDnPXiO0
 ne_kd1,넥스트에디션 건대1호점,27,0:00,"썸,몬스터:10800,MONSTER:10800,다시봄,B아파트13동1313호,이불밖은위험해,SOUL CHASER-실종,소울체이서",,,https://naver.me/GrmFdTpH
@@ -53,7 +54,7 @@ de_sb,도어이스케이프 신논현 블루점,6,0:00,"TRUTH,트루스,이방�
 de_as,도어이스케이프 안산점,7,22:00,"파라오의석실,마녀의저주,미친의사,빅뱅,측신,엘로디,ellodie",,,https://naver.me/5YFAZ1Zd
 de_ls,도어이스케이프 이수역점,,,"파라오의석실,빠삐용,검은조직,S.O.S정글",1,,https://naver.me/Gxk1Gtcb
 de_hd,도어이스케이프 홍대점,6,0:00,"신기루,해결",,,https://naver.me/xtgpdbnY
-dle_gn,돌로이스케이프,6,0:00,"무엇에썼던물건인고?,시선,아로새김",,,https://doloescape.co.kr/
+dle_gn,돌로이스케이프,6,0:00,"박물관철거현장,박철현,시선,아로새김,더대기실,the대기실",,,https://doloescape.co.kr/
 dm_gw1,둠이스케이프 1호점,14,0:00,"나폴리탄,렌더링,랜더링,RENDERING,기담정,인앤아웃,IN&OUT",,,https://doomescape.com/
 dm_gw2,둠이스케이프 2호점,15,23:00,"운명,디스토피아,죄,인바이트",,,https://doomescape.com/
 dm_dth,둠이스케이프 DTH점,7,23:30,"슬래셔,트리거,언리얼,스네어",,,https://doomescape.com/
@@ -150,7 +151,7 @@ bp_sd,비트포비아 서면던전,6,20:00,"오늘나는,날씨의신,꿈의공�
 bp_sdr,비트포비아 서면던전 레드,6,21:00,"어느수집가의집,AMEN,아멘,고시원살인사건,당감동정육점,부적,산장으로의초대",,,https://xdungeon.net/
 bp_hd1,비트포비아 홍대던전,6,13:00,"사라진보물:대저택의비밀,날씨의신,날신,꿈의공장,꿈공,오늘나는",,,https://xdungeon.net/
 bp_hd3,비트포비아 홍대던전3,6,15:00,"그달동네,이미지세탁소,이세소,ANDIMETE,앤아멧이,경성연쇄실종사건",,,https://xdungeon.net/
-sm_gj,상상의 문 광주점,6,0:00,"영결식,시크릿왕국의스캔들,호러맨스,서울만가면된다,TITAN:전쟁의경계",,,https://xn--z92b74ha268d.com/
+sm_gj,상상의 문 광주점,6,0:00,"영결식,시크릿왕국의스캔들,호러맨스,서울만가면된다,TITAN:전쟁의경계,그럼에도불구하고",,,https://xn--z92b74ha268d.com/
 sm_dhr,상상의 문 대학로점,6,0:00,"나이트워크,스포일러,경찰과도둑,경도",,,https://xn--z92b74ha268d.com/
 sm_bp,상상의 문 부평점,6,0:00,"쇼쿠진,420번지,흑신소,행복목욕탕,행목",,,https://xn--z92b74ha268d.com/
 sm_bs,상상의 문 분당서현점,6,0:00,"시크릿왕국의스캔들,시왕스,HERE I AM,히얼아이엠,몽염:도망칠 수 없는꿈,역만,셔플월드,전당포조필두",,,https://xn--z92b74ha268d.com/
@@ -236,8 +237,7 @@ ohp_gn,오늘의 한 페이지,7,22:00,"버디,BUDDY,용하다,용해!용팔도�
 otv_dsr,오렌지티비 대구동성로점,6,0:00,"돈마니,화동래전,구해줘홈즈,더레이븐:복수의시작,무드셀라,라면왕,1672,에그머니나!,심판,유토피아,리버사이드 호텔 살인사건,광수대",,,http://xn--sm2bu7i08gwyd91o.com/
 otv_dj,오렌지티비 대전은행점,6,0:00,"돈마니,화동래전,구해줘홈즈,더레이븐:복수의시작,무드셀라,라면왕,1672,에그머니나!,심판,유토피아,리버사이드 호텔 살인사건,광수대",,,http://xn--sm2bu7i08gwyd91o.com/
 osm_hd,오아시스 뮤지엄,6,0:00,"업사이드다운,업사다,미쌍삭스미스터리,미싹미,배드타임,BAED TIME,밷타,하이맥스,하맥,HIGH MAX",,,https://oasismuseum.com
-wtw_esc,월투월방탈출 서울대입구점,,,"마법사의세계,지하감옥,드림인베이더,이상한나라의초대,조선시대도둑놈",1,,https://naver.me/xTT2vxAy
-wy_hd,위욜,6,0:00,"디어마이프렌드,디마프,즐거운나의집,즐나집,히든오퍼",,,https://weyol.com/'
+wy_hd,위욜,6,0:00,"디어마이프렌드,디마프,즐거운나의집,즐나집,콩닥콩닥베이커리,콩콩베,콩닥빵집",,,https://weyol.com/'
 er8_gn,이룸에이트,6,0:00,"고인,GOIN,민초,고령화사회,아이엠유튜버,스테이시,STACY,낙원,죽지않아,착한사람",,,https://eroom8.co.kr/
 ecp_dj,이스케이퍼스 AFSC,7,22:00,"더벙커,포타폭감옥,하찮은초능력,나의애착인형,야간당직,초대:꿈꾸는아이",,,https://naver.me/5Eninabc
 ecp_dsr,이스케이퍼스 대구동성로점,,,"멍스타그램,웰컴투캔디샵,폰부스,돈싱크,서커스,동성극단의사정,끝까지간다",1,,http://www.escapers.co.kr/
@@ -279,7 +279,7 @@ cb_hd,큐브이스케이프 홍대점,,,"피라미드의비밀,헨젤과그레�
 clv_tw,클레버타운,6,0:00,"난너의보이,좌뇌우뇌연구소,난너보,좌우연",,,https://clevertown.co.kr/
 clv_tw,클레버타운,13,0:00,"가암성당,감성당",,,https://clevertown.co.kr/
 key_log1,키이스케이프 LOG_IN1,6,10:00,"포프리,FOR FREE,머니머니패키지,머머패",,,https://www.keyescape.com
-key_log2,키이스케이프 LOG_IN2,6,10:00,"어젠틀먼데이,어젠먼,AGENTLEMONDAY,백투더씬,백씬,백신,빽씬,BACK TO THE SCENE",,,https://www.keyescape.com
+key_log2,키이스케이프 LOG_IN2,6,10:00,"어젠틀먼데이,어젠먼,AGENTLEMONDAY,백투더씬,백씬,백신,빽씬,BACK TO THE SCENE,NOT MONKEY PROJECT,낫몽키프로젝트",,,https://www.keyescape.com
 key_st,키이스케이프 STATION,6,11:30,"머니머니부동산,머머부,NOSTELGIA VISTA,노스텔지아비스타,내방",,,https://www.keyescape.com
 key_to,키이스케이프 강남 더오름,6,10:00,"NERD,네드,ANGELIO,엔제리오",,,https://www.keyescape.com
 key_gn,키이스케이프 강남점,13,18:00,"그카지말라캤자나,살살연,살랑살랑연구소,월야애담",,,https://www.keyescape.com
@@ -338,4 +338,5 @@ mp_kd2,머더파커 건대2호점,,,"그림가문,초대받지않은손님,특�
 gom_sm,게임 오브 마인드 서면점,,,"블랙매직위험한마법사,다크매직어둠의마법,다빈치생명의서,카니발미치광이의사",1,,https://naver.me/xTT6YRit
 sh_sw_2,셜록홈즈 수원역2호점 (T.A),,,"그레이백작가의 밀실,제4창고에서의 탈출,ASDF,우수사원,비밀번호찾기,402호병실,고서연전,인생은실전이다종만아",1,,https://sherlock-holmes.co.kr/
 zw_kd,제로월드 다이브 건대점,14,12:30,"인터뷰,interview,오르골",,,https://zeroworldkorea.com/
-mz_kd,더메이즈 건대점,,,"나쁜아기돼지삼형제,남영동1084,트룰리,truly?,마지막문",1,,https://naver.me/5wNGvepX
+mz_kd,더메이즈 건대점,,,"나쁜아기돼지삼형제,남영동1084,트룰리,truly?,마지막문,TURN,턴",1,,https://naver.me/5wNGvepX
+fly_sw,THE FLIGHT,7,11:00,"이야기가게,퍼펙트셀,perfectcell,양곤미용학원,no need for apologies,노니드포아폴로지,사과할필요없어요,월야탐정,코자자호텔,COZAZAHOTEL",,,https://naver.me/FRoQkyqM
