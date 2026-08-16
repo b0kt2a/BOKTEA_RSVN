@@ -3,7 +3,7 @@ bk_hv,BLACK H[-]AVEN,,,"4F:마지막기록,4층",1,매주 화요일 오전 11:00
 d_coder,Decoder,,,"TEMPO RUBATO,INTROVERTED THIEF,FURIOUS REVENGE,템포루바토,템루,남자방,여자방",1,,http://decoder.kr/
 mhz_esc,MHZ ESCAPE,,,우야,,,
 33_kd,PLAY33 건대점,7,20:00,"다이얼,그날,목격자",,,https://play33.kr/
-33_dj,PLAY33 대전점,7,10:00,"강천여자고등학교,강천여고,자각몽,좌충우돌꼬마마법사",,,https://play33.kr/
+33_dj,PLAY33 대전점,7,10:00,"강천여자고등학교,강천여고,자각몽,좌충우돌꼬마마법사,우울해서빵샀어",,,https://play33.kr/
 33_hd,PLAY33 홍대점,7,20:00,피안화,,,https://play33.kr/
 st_esc,STUDIO ESC,6,0:00,"하얀마법사,검은마법사,하마,흰마,검마",,,https://studioesc.co.kr/
 fly_sw,THE FLIGHT,7,11:00,"이야기가게,퍼펙트셀,perfectcell,양곤미용학원,no need for apologies,노니드포아폴로지,사과할필요없어요,월야탐정,코자자호텔,COZAZAHOTEL",,,https://naver.me/FRoQkyqM
@@ -192,6 +192,7 @@ sh_sw,셜록홈즈 수원역점 (T.A),,,"1980 레트로게임룸,세계날씨본
 sh_ig,셜록홈즈 수원인계점 (T.A),,,"아트마와위대한유산,무제,그는남쪽을꿈꾸지않았다,WHO ARE U?,후아유,라이트랠리,기담,ATOY,어토이",1,,https://sherlock-holmes.co.kr/
 sh_sj,셜록홈즈 수지구청점 (T.A),,,"호텔더게임,투더제로,7개의죄,스테이호디에,체이서VS체이서",1,,https://sherlock-holmes.co.kr/
 sh_as,셜록홈즈 아산점,,,"귀로여관,노룸,악마를보았다,대마법사오셀로,말못해",1,,https://sherlock-holmes.co.kr/
+sh_ans,셜록홈즈 안산점 (T.A),,,"블록버스터,미궁속의프롬프트,삼사라의환생공방,수수께끼의성,폭탄마버니,별의이면",1,,https://sherlock-holmes.co.kr/
 sh_bg,셜록홈즈 안양범계점 (T.A),14,0:00,"버튼을누르세요,PLAYORDIE,플레이OR다이,플레이다이,1111,우리,나는야천재테러리스트,햄즈살찌우기,GUESS WHO KNOCK KNOCK,게스후낙낙,게스후녹녹",,,https://sherlock-holmes.co.kr/
 sh_ys,셜록홈즈 여수점,,,"전기톱살인사건,빛과그림자:화이트의죽음2,이상한나라의초대,할머니는마법사,크라임씬,무속인살인사건,파라오의심판",1,,https://sherlock-holmes.co.kr/
 sh_db,셜록홈즈 용인동백점 (T.A),,,"방탈출오락실,THE GOTH:마녀시험,돈에돈돈,다우트,헨젤,그레텔,뮤직팩토리,디핵스",1,,https://sherlock-holmes.co.kr/
@@ -206,7 +207,8 @@ sh_ca2,셜록홈즈 천안2호점,,,"미즈몰리아와수수께끼의책,TIED,�
 sh_cj,셜록홈즈 청주점,,,"반고흐의방,빛과그림자:화이트의죽음2,도둑들,무속인살인사건,크라임씬",1,,https://sherlock-holmes.co.kr/
 sh_pt,셜록홈즈 평택점,,,"지옥의배달부,도둑들,혼:원혼의저주,미녀와야수,반고흐의방",1,,https://sherlock-holmes.co.kr/
 swj_sw,소우주,6,0:00,"풀문,도고,마지막유산,영포에버,방과후추리반,여고생살인사건,여고생실종사건,SPIN-OFF,스핀오프",,,http://sowoojoo-escape.com/
-swj_ig,소우주 인계갤러리점,6,13:00,시간의균열,,,https://naver.me/5YSvb8vM
+swj_ig,소우주 인계갤러리점,6,0:50,시간의균열,,,https://naver.me/5YSvb8vM
+swj_ig,소우주 인계갤러리점,6,0:55,갇힘의 미학,,,https://naver.me/5YSvb8vM
 sv_kd1,솔버 1호점,,,"LUCID DREAM,루시드드림,자각몽,COLD CASE,콜드케이스,미제사건,THE CAGE,더케이지",1,,http://solver-gd.com/
 sv_kd2,솔버 2호점,,,"DEAR MARSY,디어마르시,디마,이층복도끝화장실,이복화,무채색인간",1,,http://solver-gd.com/
 sr_hd,쇼룸 404,13,0:00,"한라아파트4동404호,유튜버매화선녀,PIG,피그,꼬치진다,블랙홀",,,https://showroom404.com/
@@ -306,9 +308,9 @@ pm_bs,파노라마 부산점,12,0:00,미래재난리포트,,,https://naver.me/Fu
 pm_hs,파노라마 홍대삼거리점,6,0:00,"PUPPET PLAY,퍼펫플레이",,,https://naver.me/xYvoyDqy
 pm_hd,파노라마 홍대입구점,,,"룰더데이,ruletheday",1,매주 토요일 22:00 2주뒤 토 ~ 금까지 예약 오픈,https://naver.me/5o0Qylbb
 pm_lw,파노라마X롯데월드,14,0:00,파란,,,https://panorama-escape.com/
-ft_str1,판타스트릭 1호점,6,0:00,"태초의신부:이브프로젝트,태이프,테이프",,,http://fantastrick.co.kr/
-ft_str2,판타스트릭 2호점,6,0:00,사자의서:북오브두아트,,,http://fantastrick.co.kr/
-ft_str3,판타스트릭 TGC,6,0:00,"LOCKDOWN CITY,락다운시티,시간의영속성",,,http://fantastrick.co.kr/
+ft_str1,판타스트릭 1호점,7,21:00,"태초의신부:이브프로젝트,태이프,테이프",,,http://fantastrick.co.kr/
+ft_str2,판타스트릭 2호점,7,21:00,사자의서:북오브두아트,,,http://fantastrick.co.kr/
+ft_str3,판타스트릭 TGC,7,21:00,"LOCKDOWN CITY,락다운시티,시간의영속성",,,http://fantastrick.co.kr/
 ft_sia,판타지아,,,"찬미특수진료센터,인스펙토,겟오겟오,GET O GET O,INSPECTO",1,매주 금요일 00:00 3주 뒤 수요일까지 예약 오픈,https://naver.me/GI3hw5ys
 pnc_md,패닉이스케이프 목동점,,,"매직아카데미,ARROW,애로우,두얼굴의영주",1,,http://www.panicescape.com/
 pn_gn,포인트나인 강남점,6,0:00,"시간이멈춘마을,시멈마,열쇠공의이중생활,눈먼귀금속상인의후회,주인없는낡은서점",,,https://point-nine.com/
@@ -340,3 +342,6 @@ gk_tk,황금열쇠 대구동성로2호점,6,0:00,"배롭배,배드롭배드,BAD 
 gk_dsr,황금열쇠 대구동성로점,6,0:00,"경산,가이아,기적의땅,자일로,JAIL.O,타임스틸러,X됐다,좆됐다,ㅈ됐다",,,http://xn--jj0b998aq3cptw.com/
 gk_ca,황금열쇠 천안아케이드점,6,0:00,괴물,,,https://naver.me/FZoojzvU
 hs_hd,히든스위치 홍대점,,,"AUDREY,오드리,MISSING,미씽",1,,https://naver.me/GQ1lYd0z
+sh_djds,셜록홈즈 대전둔산점 (T.A),14,0:00,"개구리괴담,침프프로젝트,엘리멘탈,C.H.I.M.P PROJECT,elemental,안치실,백스테이지",,,https://sherlock-holmes.co.kr/
+ex_es,익스플로리아 이스케이프,,,"외로움과고독사이,외고독,포리프",1,,https://exploria-escape.kr/
+lbrt_es,라비린스 이스케이프,29,0:00,"코어,어사일럼,로스트레거시,포세이돈,앤하우스,내셔널트레져,드림스토어",,,https://le-room.co.kr/
